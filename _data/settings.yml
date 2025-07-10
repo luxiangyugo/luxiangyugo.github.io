@@ -13,6 +13,8 @@ people:
 - {name: 'Graduate Student', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/graduate-student.jpg', url: 'graduate-student'}
 
 hobbies:
+- {name: '📷 Take Photo',  url: 'hobbies', description: 'instagram_photo', link: 'https://www.instagram.com/luxiangyugo/', image: 'assets/img/IMG_2323_s.jpg'}
+- {name: '🏞 Tour & Explore',  url: 'hobbies', description: 'xiaohongshu_photo', link: 'https://www.xiaohongshu.com/user/profile/5fe6a07f00000000010062e4/', image: 'assets/img/IMG_2524_LR_s.jpg'}
 - {name: '🐲 Board Games and D&D TRPG',  url: 'hobbies', description: 'DND-Wizards', link: 'https://dnd.wizards.com/', image: 'assets/img/h1_BaldursGate.jpg'}
 - {name: '🎥 UAV Photography and Film Editing',  url: 'hobbies', description: 'Aerial Videos', link: 'https://www.bilibili.com/video/BV1nW4y1M7un/?share_source=copy_web&vd_source=6db384fae8a3447f8093591b1e124c05', image: 'assets/img/h2_Harvest.jpg'}
 - {name: '⛰️ Hiking, Cycling and Touring',  url: 'hobbies', description: 'Bicycle Touring', link: 'https://www.crazyguyonabike.com/', image: 'assets/img/h3_Touring.jpg'}
