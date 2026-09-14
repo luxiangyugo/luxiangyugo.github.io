@@ -1,4 +1,6 @@
 ---
 layout: publications
-title: "Publications"
+title: Publications
+section: publications
+permalink: /publications
 ---

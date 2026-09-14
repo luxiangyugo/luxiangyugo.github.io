@@ -1,4 +1,6 @@
 ---
 layout: hobby
-title: "Hobbies"
+title: Beyond Research
+section: beyond
+permalink: /hobby
 ---

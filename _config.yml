@@ -1,5 +1,7 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "Home" # the name of your site, e.g. ACME Corp.
-# description: "Doctoral student at Zhejiang University"
-# theme: academic-jekyll-theme
+url: "https://luxiangyugo.github.io"
+baseurl: ""
+title: "Xiangyu Lu · Reliable Visual Perception"
+description: "Xiangyu Lu is a postdoctoral researcher at Zhejiang University, studying reliable visual perception across scales—from agricultural remote sensing to optical inspection."
+lang: en
+markdown: kramdown
+exclude: [README.md, CHANGELOG.md, Gemfile, Gemfile.lock, academic.gemspec, vendor, scripts, docs, node_modules, package.json, package-lock.json]

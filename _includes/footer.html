@@ -1,10 +1,7 @@
-<footer class="pt-5 my-5 text-muted border-top">
-  <div class="row">
-    <div class="col-md-7 text-end social-media-icons">
-      {% for item in site.data.settings.social %}
-        <a href="{{ item.link }}" class="ms-3 fs-5"> 
-          <p class="fab fa-{{ item.icon }}"></p></a>
-      {% endfor %}
-    </div>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-top"><div><p class="eyebrow">LET'S CONNECT</p><h2>A shared curiosity?<br><em>Let's talk.</em></h2></div>
+    <div class="footer-contact"><p>Research collaborations, optical inspection,<br>and interesting ways of seeing.</p><a class="email" href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }} <span aria-hidden="true">↗</span></a><p class="location">Hangzhou, China · Zhejiang University</p></div></div>
+    <div class="footer-bottom"><span>© {{ 'now' | date: '%Y' }} Xiangyu Lu <span lang="zh-CN">陆祥宇</span></span><div class="social-links">{% for link in site.data.profile.social %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }} <span aria-hidden="true">↗</span></a>{% endfor %}</div><a href="#main">Back to top ↑</a></div>
   </div>
 </footer>

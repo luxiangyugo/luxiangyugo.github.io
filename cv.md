@@ -1,4 +1,6 @@
 ---
 layout: cv
-title: "CV"
+title: About
+section: about
+permalink: /cv
 ---

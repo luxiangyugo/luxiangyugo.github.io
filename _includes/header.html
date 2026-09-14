@@ -1,16 +1,15 @@
-<header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-5 border-bottom">
-  <div>
-    <a href="{{ site.baseurl }}/" class="d-flex mt-1 text-decoration-none" style="color: #212529;">
-      <span class="fs-4 fw-bold">{{ site.title }}</span>
-    </a>
-    <a href="{{ site.github.url }}/" class="d-flex align-items-center text-decoration-none">
-      <span>{{ site.description }}</span>
-    </a>
-  </div>
-  <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-    {% for item in site.data.settings.menu %}
-      <a class="me-3 py-2 text-decoration-none" style="color: #212529; font-size: 1.2rem;" 
-      href="{{ site.github.url }}{{ item.url }}" rel="noopener">{{ item.name }}</a>
-    {% endfor %}
+<header class="site-header wrap">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Xiangyu Lu home">
+    <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><circle cx="20" cy="20" r="13"/><circle cx="20" cy="20" r="6"/><path d="M20 0v10m0 20v10M0 20h10m20 0h10"/></svg>
+    <span>Xiangyu Lu <span class="brand-zh" lang="zh-CN">陆祥宇</span></span>
+  </a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span aria-hidden="true">+</span></button>
+  <nav id="site-nav" aria-label="Main navigation">
+    <a href="{{ '/research' | relative_url }}" {% if page.section == 'research' %}aria-current="page"{% endif %}>Research</a>
+    <a href="{{ '/publications' | relative_url }}" {% if page.section == 'publications' %}aria-current="page"{% endif %}>Publications</a>
+    <a href="{{ '/cv' | relative_url }}" {% if page.section == 'about' %}aria-current="page"{% endif %}>About</a>
+    <a href="{{ '/hobby' | relative_url }}" {% if page.section == 'beyond' %}aria-current="page"{% endif %}>Beyond</a>
+    <a href="{{ '/contact' | relative_url }}" {% if page.section == 'contact' %}aria-current="page"{% endif %}>Contact <span aria-hidden="true">↗</span></a>
+    <a class="language-link" href="{{ '/cv#chinese-profile' | relative_url }}" lang="zh-CN" aria-label="阅读中文简介">中文</a>
   </nav>
 </header>

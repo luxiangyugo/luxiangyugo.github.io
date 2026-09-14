@@ -1,7 +1,4 @@
 ---
 layout: default
 ---
-
-{{ content }}
-
-{% include contact.html %}
+<div class="wrap page-body"><header class="page-heading"><p class="eyebrow">CONTACT</p><h1>Let's compare<br><em>perspectives.</em></h1></header><div class="contact-layout"><div><p>I'm interested in conversations around visual perception, agricultural remote sensing, and optical inspection—from new research questions to practical collaborations.</p><a class="email" href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }} ↗</a><p>{{ site.data.profile.role }}<br>{{ site.data.profile.unit }}<br>{{ site.data.profile.institution }}<br>{{ site.data.profile.location }}</p></div><aside class="contact-details"><h2>Find me elsewhere.</h2><p>Publications, code, and professional connections.</p><div class="social-links">{% for link in site.data.profile.social %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }} ↗</a>{% endfor %}</div></aside></div></div>

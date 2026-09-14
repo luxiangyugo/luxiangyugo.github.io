@@ -1,0 +1,37 @@
+name: Xiangyu Lu
+name_zh: 陆祥宇
+role: Postdoctoral Researcher
+institution: Zhejiang University
+unit: ZJU-Hangzhou Global Scientific and Technological Innovation Center
+email: luxyzju@zju.edu.cn
+location: Hangzhou, China
+tagline: Reliable Visual Perception across Scales
+intro: I study how to see reliably under challenging imaging conditions—connecting imaging mechanisms, annotation-efficient learning, and practical vision systems.
+intro_zh: 我是陆祥宇，现为浙江大学杭州国际科创中心博士后，研究复杂成像条件下的可靠视觉感知，应用涵盖农业无人机遥感与光学制造检测。我关注成像退化与结构恢复、低标注成本的视觉学习，以及几何和跨焦层信息驱动的异常感知，希望将对成像问题的理解转化为可验证、可应用的视觉方法。
+background_zh: 我于 2025 年获得浙江大学农业电气化与自动化博士学位，曾于 2024–2025 年在多伦多大学开展访问研究。目前重点推进多焦层光学缺陷感知及工业视觉定位，并主持已获批、将于 2027 年启动的国家自然科学基金青年科学基金项目（C类），批准号 32602720，执行期 2027–2029 年。
+social:
+  - name: GitHub
+    url: https://github.com/luxiangyugo
+  - name: Google Scholar
+    url: https://scholar.google.com/citations?user=u2q9sI8AAAAJ&hl=en
+  - name: ResearchGate
+    url: https://www.researchgate.net/profile/Xiangyu_Lu6
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/xiangyu-lu-393207253/
+experience:
+  - date: 2026.01 — present
+    title: Postdoctoral Researcher
+    institution: Zhejiang University
+    detail: ZJU-Hangzhou Global Scientific and Technological Innovation Center. Optical inspection, multi-focus visual representations, and adaptation across imaging conditions.
+  - date: 2020.09 — 2025.12
+    title: Ph.D. · Agricultural Electrification and Automation
+    institution: Zhejiang University
+    detail: College of Biosystems Engineering and Food Science. Advisor, Prof. Fei Liu. Dissertation on UAV-based rice phenology and disease, pest, and weed stress monitoring.
+  - date: 2024 — 2025
+    title: Visiting Doctoral Research
+    institution: University of Toronto
+    detail: Ecological remote sensing and UAV-based multi-source forest observation, during my Zhejiang University doctorate.
+  - date: 2016.09 — 2020.07
+    title: B.Eng. · Agricultural Mechanization and Automation
+    institution: Northwest A&F University
+    detail: An engineering foundation in sensing, automation, and agricultural systems.

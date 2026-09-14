@@ -1,4 +1,6 @@
 ---
 layout: research
-title: "Research"
+title: Research
+section: research
+permalink: /research
 ---

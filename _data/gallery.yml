@@ -1,0 +1,16 @@
+- image: botanical.webp
+  title: A closer look.
+  category: Photography
+  alt: Small pink flowers and sunlit green leaves against a dark background, from Xiangyu Lu's photography collection.
+- image: waterfall.webp
+  title: Follow the water.
+  category: Travel & observation
+  alt: A broad waterfall and turbulent blue water, from Xiangyu Lu's travel photography collection.
+- image: aerial.webp
+  title: A different perspective.
+  category: Aerial photography
+  alt: An aerial view of field plots, village roofs, and intersecting roads.
+- image: landscape.webp
+  title: Take the long way.
+  category: Hiking & cycling
+  alt: Green mountains above water-filled terraced fields, from the original outdoor photography collection.

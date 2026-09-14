@@ -1,4 +1,6 @@
 ---
 layout: contact
-title: "Contact"
+title: Contact
+section: contact
+permalink: /contact
 ---

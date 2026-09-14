@@ -1,0 +1,171 @@
+- doi: 10.1016/j.compag.2024.109786
+  title: Weakly supervised dual-mask marginal segmentation and variable path planning method for bean
+    weed based on UAV remote sensing
+  authors:
+  - Jianlin Zhang
+  - Xiangyu Lu
+  - Rui Yang
+  - Hongxing Xu
+  - Yan Huai
+  - Fei Liu
+  journal: Computers and Electronics in Agriculture
+  year: 2025
+  volume: '230'
+  issue: null
+  page: '109786'
+  first_author: false
+  selected: false
+  citation: Jianlin Zhang, Xiangyu Lu, Rui Yang, Hongxing Xu, Yan Huai, Fei Liu. (2025). Weakly supervised
+    dual-mask marginal segmentation and variable path planning method for bean weed based on UAV remote
+    sensing. Computers and Electronics in Agriculture, 230, 109786. https://doi.org/10.1016/j.compag.2024.109786
+- doi: 10.1016/j.isprsjprs.2024.08.017
+  title: Effective variance attention-enhanced diffusion model for crop field aerial image super resolution
+  authors:
+  - Xiangyu Lu
+  - Jianlin Zhang
+  - Rui Yang
+  - Qina Yang
+  - Mengyuan Chen
+  - Hongxing Xu
+  - Pinjun Wan
+  - Jiawen Guo
+  - Fei Liu
+  journal: ISPRS Journal of Photogrammetry and Remote Sensing
+  year: 2024
+  volume: '218'
+  issue: null
+  page: 50-68
+  first_author: true
+  selected: true
+  citation: Xiangyu Lu, Jianlin Zhang, Rui Yang, Qina Yang, Mengyuan Chen, Hongxing Xu, Pinjun Wan, Jiawen
+    Guo, Fei Liu. (2024). Effective variance attention-enhanced diffusion model for crop field aerial
+    image super resolution. ISPRS Journal of Photogrammetry and Remote Sensing, 218, 50-68. https://doi.org/10.1016/j.isprsjprs.2024.08.017
+- doi: 10.1016/j.compag.2024.108923
+  title: Simultaneous detection of reference lines in paddy fields using a machine vision-based framework
+  authors:
+  - Xiya Zhang
+  - Xiangyu Lu
+  - Zeqing Zhang
+  - Guofeng Yang
+  - Yong He
+  - Hui Fang
+  journal: Computers and Electronics in Agriculture
+  year: 2024
+  volume: '221'
+  issue: null
+  page: '108923'
+  first_author: false
+  selected: false
+  citation: Xiya Zhang, Xiangyu Lu, Zeqing Zhang, Guofeng Yang, Yong He, Hui Fang. (2024). Simultaneous
+    detection of reference lines in paddy fields using a machine vision-based framework. Computers and
+    Electronics in Agriculture, 221, 108923. https://doi.org/10.1016/j.compag.2024.108923
+- doi: 10.3390/drones7020083
+  title: Automated Rice Phenology Stage Mapping Using UAV Images and Deep Learning
+  authors:
+  - Xiangyu Lu
+  - Jun Zhou
+  - Rui Yang
+  - Zhiyan Yan
+  - Yiyuan Lin
+  - Jie Jiao
+  - Fei Liu
+  journal: Drones
+  year: 2023
+  volume: '7'
+  issue: '2'
+  page: '83'
+  first_author: true
+  selected: true
+  citation: Xiangyu Lu, Jun Zhou, Rui Yang, Zhiyan Yan, Yiyuan Lin, Jie Jiao, Fei Liu. (2023). Automated
+    Rice Phenology Stage Mapping Using UAV Images and Deep Learning. Drones, 7(2), 83. https://doi.org/10.3390/drones7020083
+- doi: 10.1016/j.compag.2023.107725
+  title: Developing thermal infrared de-ghost and multi-level nested conglutinated segmentation algorithm
+    for detection of rice seed setting rate
+  authors:
+  - Jun Zhou
+  - Xiangyu Lu
+  - Rui Yang
+  - Yaliang Wang
+  - Huizhe Chen
+  - Jianxun Shen
+  - Mengyuan Chen
+  - Zhenjiang Zhou
+  - Fei Liu
+  journal: Computers and Electronics in Agriculture
+  year: 2023
+  volume: '207'
+  issue: null
+  page: '107725'
+  first_author: false
+  selected: false
+  citation: Jun Zhou, Xiangyu Lu, Rui Yang, Yaliang Wang, Huizhe Chen, Jianxun Shen, Mengyuan Chen, Zhenjiang
+    Zhou, Fei Liu. (2023). Developing thermal infrared de-ghost and multi-level nested conglutinated segmentation
+    algorithm for detection of rice seed setting rate. Computers and Electronics in Agriculture, 207,
+    107725. https://doi.org/10.1016/j.compag.2023.107725
+- doi: 10.1016/j.jksuci.2022.03.006
+  title: A hybrid model of ghost-convolution enlightened transformer for effective diagnosis of grape
+    leaf disease and pest
+  authors:
+  - Xiangyu Lu
+  - Rui Yang
+  - Jun Zhou
+  - Jie Jiao
+  - Fei Liu
+  - Yufei Liu
+  - Baofeng Su
+  - Peiwen Gu
+  journal: Journal of King Saud University - Computer and Information Sciences
+  year: 2022
+  volume: '34'
+  issue: '5'
+  page: 1755-1767
+  first_author: true
+  selected: true
+  citation: Xiangyu Lu, Rui Yang, Jun Zhou, Jie Jiao, Fei Liu, Yufei Liu, Baofeng Su, Peiwen Gu. (2022).
+    A hybrid model of ghost-convolution enlightened transformer for effective diagnosis of grape leaf
+    disease and pest. Journal of King Saud University - Computer and Information Sciences, 34(5), 1755-1767.
+    https://doi.org/10.1016/j.jksuci.2022.03.006
+- doi: 10.3390/drones6060151
+  title: Developing Novel Rice Yield Index Using UAV Remote Sensing Imagery Fusion Technology
+  authors:
+  - Jun Zhou
+  - Xiangyu Lu
+  - Rui Yang
+  - Huizhe Chen
+  - Yaliang Wang
+  - Yuping Zhang
+  - Jing Huang
+  - Fei Liu
+  journal: Drones
+  year: 2022
+  volume: '6'
+  issue: '6'
+  page: '151'
+  first_author: false
+  selected: false
+  citation: Jun Zhou, Xiangyu Lu, Rui Yang, Huizhe Chen, Yaliang Wang, Yuping Zhang, Jing Huang, Fei Liu.
+    (2022). Developing Novel Rice Yield Index Using UAV Remote Sensing Imagery Fusion Technology. Drones,
+    6(6), 151. https://doi.org/10.3390/drones6060151
+- doi: 10.3390/rs13245102
+  title: A Multi-Source Data Fusion Decision-Making Method for Disease and Pest Detection of Grape Foliage
+    Based on ShuffleNet V2
+  authors:
+  - Rui Yang
+  - Xiangyu Lu
+  - Jing Huang
+  - Jun Zhou
+  - Jie Jiao
+  - Yufei Liu
+  - Fei Liu
+  - Baofeng Su
+  - Peiwen Gu
+  journal: Remote Sensing
+  year: 2021
+  volume: '13'
+  issue: '24'
+  page: '5102'
+  first_author: false
+  selected: false
+  citation: Rui Yang, Xiangyu Lu, Jing Huang, Jun Zhou, Jie Jiao, Yufei Liu, Fei Liu, Baofeng Su, Peiwen
+    Gu. (2021). A Multi-Source Data Fusion Decision-Making Method for Disease and Pest Detection of Grape
+    Foliage Based on ShuffleNet V2. Remote Sensing, 13(24), 5102. https://doi.org/10.3390/rs13245102
