@@ -1,0 +1,207 @@
+- id: invention-patents
+  title: Invention patents
+  entries:
+  - id: CN117911382B
+    title: 一种超分辨率图像的综合质量计算方法
+    lang: zh-CN
+    inventors:
+    - 刘飞
+    - 陆祥宇
+    - 杨睿
+    - 张建林
+    - 杨淇钠
+    - 陈梦媛
+    - 孔汶汶
+    - 彭继宇
+    number: CN117911382B
+    jurisdiction: China
+    granted: 2026.08.28
+    assignee: Zhejiang University
+    application: '202410102579.6'
+    links:
+    - name: Patent
+      url: https://patents.google.com/patent/CN117911382B/zh
+    - name: Certificate
+      url: /assets/documents/patent-CN117911382B.pdf
+  - id: CN114782843B
+    title: 基于无人机多光谱图像融合的作物产量预测方法及系统
+    lang: zh-CN
+    inventors:
+    - 刘飞
+    - 周军
+    - 陆祥宇
+    - 杨睿
+    - 陈梦媛
+    - 焦杰
+    - 刘羽飞
+    - 孔汶汶
+    number: CN114782843B
+    jurisdiction: China
+    granted: 2025.12.26
+    assignee: Zhejiang University
+    application: '202210428234.0'
+    links:
+    - name: Patent
+      url: https://patents.google.com/patent/CN114782843B/zh
+  - id: CN119048906B
+    title: 一种基于边缘性分割的草害检测方法、产品、介质及设备
+    lang: zh-CN
+    inventors:
+    - 刘飞
+    - 张建林
+    - 陆祥宇
+    - 杨睿
+    - 焦杰
+    number: CN119048906B
+    jurisdiction: China
+    granted: 2025.10.03
+    assignee: Zhejiang University
+    application: '202411164309.4'
+    links:
+    - name: Patent
+      url: https://patents.google.com/patent/CN119048906B/zh
+  - id: US12104993B2
+    title: Whole-process automatic soil tabletting machine
+    inventors: &id001
+    - Fei Liu
+    - Xiangyu Lu
+    - Tiantian Pan
+    - Jun Zhou
+    - Jiangang Shen
+    - Wenwen Kong
+    - Xiaolong Li
+    inventor_lang: en
+    number: US12104993B2
+    jurisdiction: United States
+    granted: 2024.10.01
+    assignee: Zhejiang University
+    application: 17/629,455
+    pct: PCT/CN2021/074639
+    links:
+    - name: Certificate
+      url: /assets/documents/patent-US12104993B2.pdf
+  - id: CN113989225B
+    title: 一种水稻田漏秧识别方法及系统
+    lang: zh-CN
+    inventors:
+    - 刘飞
+    - 周军
+    - 陆祥宇
+    - 杨睿
+    - 焦杰
+    - 刘羽飞
+    number: CN113989225B
+    jurisdiction: China
+    granted: 2024.07.09
+    assignee: Zhejiang University
+    application: '202111256340.7'
+    links:
+    - name: Patent
+      url: https://patents.google.com/patent/CN113989225B/zh
+  - id: CN115100447B
+    title: 基于热红外图像配准融合的水稻结实率测量装置及方法
+    lang: zh-CN
+    inventors:
+    - 刘飞
+    - 周军
+    - 陆祥宇
+    - 杨睿
+    - 陈梦媛
+    - 焦杰
+    - 孔汶汶
+    number: CN115100447B
+    jurisdiction: China
+    granted: 2024.05.17
+    assignee: Zhejiang University
+    application: '202210842727.9'
+    links:
+    - name: Patent
+      url: https://patents.google.com/patent/CN115100447B/zh
+  - id: ZA2022-03153
+    title: Automatic whole-process soil tabletting device
+    inventors: *id001
+    inventor_lang: en
+    number: ZA 2022/03153
+    jurisdiction: South Africa
+    granted: 2022.05.25
+    assignee: Zhejiang University
+    pct: PCT/CN2021/074639
+    links:
+    - name: Certificate
+      url: /assets/documents/patent-ZA2022-03153.pdf
+  - id: CN112026237B
+    title: 一种全过程土壤自动压片装置
+    lang: zh-CN
+    inventors:
+    - 刘飞
+    - 陆祥宇
+    - 潘恬恬
+    - 周军
+    - 沈坚钢
+    - 孔汶汶
+    - 李小龙
+    number: CN112026237B
+    jurisdiction: China
+    granted: 2021.04.27
+    assignee: Zhejiang University
+    application: '202010862936.0'
+    links:
+    - name: Patent
+      url: https://patents.google.com/patent/CN112026237B/zh
+    - name: Certificate
+      url: /assets/documents/patent-CN112026237B.pdf
+- id: utility-models
+  title: Utility models
+  entries:
+  - id: CN212646487U
+    title: 一种激光诱导击穿光谱信号集光增强装置
+    lang: zh-CN
+    inventors:
+    - 余克强
+    - 陆祥宇
+    number: CN212646487U
+    jurisdiction: China
+    granted: 2021.03.02
+    assignee: Yu Keqiang
+    application: '202021267320.0'
+    links:
+    - name: Patent PDF
+      url: /assets/img/r5_CN212646487U.pdf
+  - id: CN210503198U
+    title: 可搭载于无人机的双腔药箱及基于该药箱的喷施作业装置
+    lang: zh-CN
+    inventors:
+    - 苏宝峰
+    - 陆祥宇
+    - 黄志一
+    - 靳盛浩
+    - 张茹飞
+    number: CN210503198U
+    jurisdiction: China
+    granted: 2020.05.12
+    assignee: Northwest A&F University
+    application: '201920132378.5'
+    links:
+    - name: Patent PDF
+      url: /assets/img/r2_CN210503198U.pdf
+  - id: CN210050268U
+    title: 一种回转运动与往复直线运动转换机构
+    lang: zh-CN
+    inventors:
+    - 郭康权
+    - 陆祥宇
+    - 徐怀
+    - 车琪
+    - 邹书洋
+    - 武文军
+    - 卫武权
+    - 党小选
+    - 武明放
+    number: CN210050268U
+    jurisdiction: China
+    granted: 2020.02.11
+    assignee: Northwest A&F University
+    application: '201920793261.1'
+    links:
+    - name: Patent PDF
+      url: /assets/img/r4_CN210050268U.pdf

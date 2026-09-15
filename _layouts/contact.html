@@ -2,6 +2,6 @@
 layout: default
 ---
 <div class="wrap page-body">
-  <header class="page-heading"><h1>Contact</h1></header>
-  <section class="contact-details"><h2>Xiangyu Lu <span lang="zh-CN">陆祥宇</span></h2><p>{{ site.data.profile.role }}<br>{{ site.data.profile.unit }}<br>{{ site.data.profile.institution }}<br>{{ site.data.profile.location }}</p><p>Email: <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p><div class="profile-links">{% for link in site.data.profile.social %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>{% endfor %}</div></section>
+  <header class="page-heading"><h1>Contact</h1><p>Contact information is now included on the <a href="{{ '/' | relative_url }}">homepage</a> and <a href="{{ '/cv' | relative_url }}">CV</a>.</p></header>
+  <p><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p>
 </div>

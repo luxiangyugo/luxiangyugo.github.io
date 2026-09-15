@@ -133,6 +133,7 @@ p + p { margin-top: 14px; }
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 1px 0 rgba(69, 91, 84, .07);
 }
 .home-news h2 { font-size: 19px; margin: 0; }
+.news-items p { font-size: 15px; }
 .section-title { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding-top: 25px; border-top: 1px solid var(--line); }
 .section-title > a { font-size: 14px; min-height: 44px; display: flex; align-items: center; }
 .publication-list { list-style: none; margin: 0; padding: 0; }
@@ -144,6 +145,24 @@ p + p { margin-top: 14px; }
 .pub-authors strong { font-weight: 600; color: var(--text); }
 .pub-journal { font-size: 14px; margin-top: 3px; }
 .pub-journal a { margin-left: 4px; }
+.patent-group + .patent-group { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+.patent-group > h2 { margin-bottom: 26px; }
+.patent { padding-bottom: 23px; border-bottom: 1px solid var(--line); }
+.patent:last-child { padding-bottom: 0; border-bottom: 0; }
+.patent h3 { margin: 0; }
+.patent h3:lang(zh) { font-size: 21px; font-weight: 400; line-height: 1.5; }
+.patent .pub-authors:lang(zh) { font-size: 17px; }
+.patent-detail { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.patent .project-links { margin-top: 10px; }
+.cv-zh-section { margin-top: 30px; }
+.cv-zh-section h3 { margin-bottom: 18px; font-size: 23px; font-weight: 400; }
+.cv-zh-section h4 { margin-bottom: 4px; font-size: 19px; font-weight: 400; }
+.cv-zh-section .experience-row p { font-size: 17px; }
+.cv-zh-section .experience-row .date { font-size: 15px; }
+.cv-zh-project { margin-bottom: 23px; }
+.cv-zh-project .muted { font-size: 15px; }
+.cv-zh-section ul { padding-left: 22px; font-size: 18px; line-height: 1.8; }
+.cv-zh-section li + li { margin-top: 8px; }
 .site-footer { display: flex; justify-content: space-between; gap: 20px; padding: 21px 0 27px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 .site-footer a { overflow-wrap: anywhere; }
 .research-group { margin-top: 36px; }
@@ -163,6 +182,12 @@ p + p { margin-top: 14px; }
 .project-detail img { width: 100%; max-height: 410px; object-fit: contain; border-radius: 10px; }
 .project-detail video { display: block; width: 100%; height: auto; border-radius: 10px; background: #141b19; }
 .illustrated-project .research-image-link { box-shadow: 0 3px 14px rgba(37, 55, 48, .055); }
+.project-detail.illustrated-project { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 0; }
+.illustrated-project .project-heading { grid-column: 1; grid-row: 1; }
+.illustrated-project .project-figures { grid-column: 1; grid-row: 2; width: 100%; max-width: none; }
+.illustrated-project .project-description { grid-column: 1; grid-row: 3; margin-top: 20px; max-width: 90ch; }
+.illustrated-project img { max-height: none; }
+.research-image-link picture { display: block; }
 .project-detail figcaption a { text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 9px; }
 .funding, .chinese-profile { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--line); }

@@ -4,7 +4,18 @@ The Research page pairs every project with a figure. Newly restored historical f
 
 Grade2Seg and PaddySeg were re-encoded from their original full-resolution PNGs with alpha preserved, correcting an earlier conversion that rendered transparent regions black and obscured figure text.
 
-## New conceptual illustrations
+## Current source-based research panels
+
+The two active figures now use real archived inspection and prototype outputs, composed as SVG with embedded image panels and vector labels. They have separate mobile layouts and open at full resolution. No image-generation model was used to fabricate, retouch, or augment experimental content in these revisions.
+
+- `assets/images/polar-fourier-research.svg` and its `-mobile.svg` variant combine archived MFL104 Polar input, robust harmonic reconstruction, robust residual score, and paired image-space detail. Image panels are cropped from `MFL104_03_polar_diagnostic.png` and `MFL104_02_roi_detail.png`, recovered from the owner's previous research attachments. Colors and intensity values are preserved. Marker A denotes the same polar-domain scratch region across the three corresponding panels. The signed defect layer is the recorded alpha-weighted perturbation layer, not an unweighted physical-defect reconstruction or a final segmentation claim.
+- `assets/images/semantic-geometric-localization.svg` and its `-mobile.svg` variant use inspection images and prompt excerpts from the owner's May 2026 Florence-2 research notes. Lens final center/circle and sensor outer/inner rectangles are traced from recorded outputs. The coarse lens candidate outline and grounding arrows are explicitly schematic. The chip AOI is cropped from the same original image used in the full-image views; the coordinate transform is preserved when redrawing the inner ROI. No image is passed off as newly inferred output.
+
+Current source material supports the single-layer mechanism and localization examples. Matched focus strips and measured trajectories are still missing on this host. The figure labels this gap and does not invent curves or imply that persistence alone determines a defect. See [the precise material checklist](research-figure-materials-needed.md).
+
+To reproduce the four current SVGs, run `python scripts/build-research-panels.py --source-dir <source-folder>` with Pillow installed. The source folder must contain `polar-diagnostic.png`, `roi-detail.png`, `lens-input.png`, and `chip-input.jpeg`; these are the unmodified archived source images described above. The script records exact crop coordinates in `panel-crops.json` and composes presentation overlays without running new inference.
+
+## Archived conceptual illustrations (superseded)
 
 Two original illustrations were generated with the built-in image_gen tool (not the API/CLI), for explaining ongoing work. They depict conceptual components and annotations, not a real apparatus, customer image, measured response, or validated segmentation result. Multi-focus z1–z3 labels denote focus indices, not calibrated physical depth. A Sunny Optical reference is presented separately as accessible webpage text.
 
@@ -57,9 +68,9 @@ Additional restored assets:
 | uav-weeds.webp | assets/img/r1_weedsUAV.jpg | Early UAV weed recognition |
 | charging-network.webp | assets/img/r2_hm.png | Charging-station network planning |
 
-## Florence-2 semantic-guidance revision
+## Archived Florence-2 conceptual revision (superseded)
 
-The active localization figure was edited with the built-in image_gen tool, using the initial illustration as the reference. Final generated source: `C:/Users/luxy/.codex/generated_images/01a0a04e-e534-7a62-bd12-34aebc5224fa/exec-532f27b0-35be-4dcd-8f0b-15589285a659.png`. A copy is preserved at `../20260914/preview/optical-localization-florence2-original.png` relative to the main repository. The page uses `assets/images/optical-localization-florence2.webp` (1536 × 1024, WebP quality 92); conversion changes only the delivery format.
+The previous conceptual localization figure was edited with the built-in image_gen tool, using the initial illustration as the reference. Final generated source: `C:/Users/luxy/.codex/generated_images/01a0a04e-e534-7a62-bd12-34aebc5224fa/exec-532f27b0-35be-4dcd-8f0b-15589285a659.png`. A copy is preserved at `../20260914/preview/optical-localization-florence2-original.png` relative to the main repository. The superseded asset remains at `assets/images/optical-localization-florence2.webp` (1536 × 1024, WebP quality 92); the active page now uses the source-based SVG panels described above.
 
 ### Semantic-guidance edit prompt
 

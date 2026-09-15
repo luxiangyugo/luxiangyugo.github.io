@@ -1,0 +1,46 @@
+source_date: 2026.06.18
+download: /assets/documents/Xiangyu-Lu-CV-ZH-20260618.pdf
+research: 专注于低空遥感与工业视觉中的多模态视觉语言模型、弱监督学习与开放词汇检测。当前重点研究正常光学结构的空间规律与焦深演化，以及语义与几何约束协同的精确检测区域定位。
+education:
+- date: 2026.01 — 至今
+  institution: 浙江大学杭州国际科创中心
+  degree: 光学工程 · 企业博士后
+  detail: 视觉语言多模态模型、光学制造缺陷 AOI、少样本识别与开放词汇检测。
+- date: 2020.09 — 2025.12
+  institution: 浙江大学
+  degree: 农业电气化与自动化 · 工学博士
+  detail: 研究课题：基于深度学习与无人机遥感的稻田智能感知。
+- date: 2024.07 — 2025.06
+  institution: 多伦多大学
+  degree: 无人机多源遥感 · 联合培养博士
+  detail: 光谱—雷达无人机多源森林遥感与图像处理。
+- date: 2016.09 — 2020.07
+  institution: 西北农林科技大学
+  degree: 农业机械化及其自动化 · 工学学士
+  detail: 绩点 3.71，专业排名 2/75；毕业设计：基于 LIBS 光谱的元素成分检测。
+projects:
+- name: VFM4AOI · 光学元件开放词汇检测与缺陷分析
+  date: 2026.01 — 至今
+  description: 面向镜头、芯片等光学元件，构建开放词汇定位、少样本识别与多模态复核流程。
+  url: /research#optical-roi
+- name: Grade2Seg · 基于弱监督的无人机图像分割
+  date: 2024.10 — 2025.04
+  description: 通过程度分级模型与类激活图实现弱监督像素分割，降低掩码标注需求。
+  url: /research#grade2seg
+- name: CropSR · 方差注意力增强扩散超分辨率
+  date: 2023.06 — 2024.06
+  description: 提出方差注意力增强扩散模型与 SRFI 评价指标，改善无人机图像跨尺度重建。
+  url: /research#cropsr
+- name: PaddySeg · 高效语义分割与物候制图
+  date: 2022.01 — 2022.12
+  description: 结合幻影卷积与双路结构实现多物候稻田分割，并以直接地理定位和增量式稀疏采样支持空间制图。
+  url: /research#paddyseg
+honors:
+- 2025 · 浙江大学优秀毕业生
+- 优秀研究生 · 连续四年
+service:
+- 期刊审稿：ISPRS Journal of Photogrammetry and Remote Sensing、Computers and Electronics in Agriculture、International
+  Journal of Digital Earth 等。
+- 课程助教：《精细农业》《精细农业实验》。
+- 学术报告：Super-resolution in Cropland Phenotyping Applications，2025 ASABE。
+skills: Python / C++ 编程，大模型部署与应用，视觉语言模型，扩散模型，语义分割，无人机遥感。

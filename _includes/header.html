@@ -3,9 +3,9 @@
   <nav aria-label="Main navigation">
     <a href="{{ '/research' | relative_url }}" {% if page.section == 'research' %}aria-current="page"{% endif %}>Research</a>
     <a href="{{ '/publications' | relative_url }}" {% if page.section == 'publications' %}aria-current="page"{% endif %}>Publications</a>
+    <a href="{{ '/patents' | relative_url }}" {% if page.section == 'patents' %}aria-current="page"{% endif %}>Patents</a>
     <a href="{{ '/cv' | relative_url }}" {% if page.section == 'about' %}aria-current="page"{% endif %}>CV</a>
     <a href="{{ '/hobby' | relative_url }}" {% if page.section == 'beyond' %}aria-current="page"{% endif %}>Hobbies</a>
-    <a href="{{ '/contact' | relative_url }}" {% if page.section == 'contact' %}aria-current="page"{% endif %}>Contact</a>
     <a href="{{ '/cv#chinese-profile' | relative_url }}" lang="zh-CN">中文</a>
   </nav>
 </header>

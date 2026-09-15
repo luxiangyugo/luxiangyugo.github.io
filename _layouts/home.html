@@ -10,12 +10,13 @@ layout: default
       <p>I am a postdoctoral researcher at the ZJU-Hangzhou Global Scientific and Technological Innovation Center, Zhejiang University. My research focuses on computer vision for agricultural remote sensing and optical inspection.</p>
       <p>I work on image super-resolution, weakly supervised segmentation, and geometry-guided visual localization. My current research studies multi-focus defect perception and few-shot anomaly detection in optical components.</p>
       <p>I received my Ph.D. from Zhejiang University in 2025 and conducted visiting doctoral research at the University of Toronto during 2024–2025.</p>
-      <div class="profile-links"><a href="mailto:{{ site.data.profile.email }}">Email</a>{% for link in site.data.profile.social %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>{% endfor %}</div>
+      <div class="profile-links"><a href="mailto:{{ site.data.profile.email }}">Email</a>{% for link in site.data.profile.social %}<a href="{{ link.url | escape }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>{% endfor %}</div>
     </div>
   </section>
   <section class="home-section home-news" aria-labelledby="news-title">
     <h2 id="news-title">News</h2>
-    <p><strong>2026</strong> — Awarded an NSFC Young Scientists Fund (Category C) grant as principal investigator for weed perception in paddy fields. Project {{ site.data.funding.number }}, {{ site.data.funding.period }}.</p>
+    <div class="news-items"><p><strong>2026.9</strong> — Awarded an NSFC Young Scientists Fund (Category C) grant as principal investigator for weed perception in paddy fields ({{ site.data.funding.period }}).</p>
+    <p><strong>2026.8</strong> — Granted a Chinese invention patent on comprehensive quality evaluation of super-resolution images. <a href="{{ '/patents#CN117911382B' | relative_url }}">CN117911382B</a></p></div>
   </section>
   <section class="home-section" id="publications" aria-labelledby="publications-title">
     <div class="section-title"><h2 id="publications-title">Selected Publications</h2><a href="{{ '/publications' | relative_url }}">Full list</a></div>
