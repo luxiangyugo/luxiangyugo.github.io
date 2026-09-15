@@ -1,56 +1,43 @@
 projects:
 - id: optical-focus
   name: Multi-focus defect perception in optical components
-  status: Mechanism prototypes · cross-focus joint perception in progress
+  status: Ongoing research
   category: Optical inspection
-  method: Normal optical structures follow spatial regularities and evolve with focus. Polar unfolding exposes radial
-    and angular patterns; robust Fourier fitting reduces the influence of localized deviations when reconstructing
-    the intrinsic background. The archived prototype outputs separate normal structure from localized residual responses.
-  image: polar-fourier-research.svg
-  alt: Archived Polar input, robust background, residual score, and paired image-space detail show spatial structure
-    decomposition. A labeled ongoing-research note explains the cross-focus direction; no measured trajectory is
-    presented.
-  caption: Spatial intrinsic-structure decomposition and cross-focus defect response. Archived single-layer outputs;
-    matched focus crops and measured trajectories are pending source material.
+  method: Polar–Fourier modeling separates regular lens structure from local residuals. The reconstructed background
+    preserves concentric patterns, while the residual emphasizes local deviations such as scratches and particles.
+  image: polar-fourier-overview.svg
+  full_image: polar-fourier-research.svg
+  alt: Three matched lens crops compare the input, reconstructed normal background, and alpha-weighted local response.
+  caption: Polar–Fourier separation · single-layer prototype.
   illustration: true
   context:
     label: Industry context
     name: Sunny Optical
     name_zh: 舜宇光学
     url: https://www.sunnyoptical.com/en/default.html
-  image_width: 1440
-  image_height: 1180
-  result: Polar–Fourier decomposition provides an interpretable structural prior. The next phase analyzes fixed-location
-    responses across focus layers, including their strength and shape relative to normal focus evolution. Persistent
-    responses can also arise from normal structures; cross-layer persistence alone is not a defect criterion. Joint
-    models and transfer gains remain under evaluation.
-  mobile_image: polar-fourier-research-mobile.svg
-  mobile_width: 720
-  mobile_height: 1700
+  image_width: 820
+  image_height: 558
+  result: Cross-focus analysis extends this structural prior to response strength and shape relative to normal
+    focus evolution. Joint perception across focus layers is under development; persistence alone does not define
+    a defect.
 - id: optical-roi
   name: Geometry-guided optical localization with Florence-2
-  status: Implemented prototypes · ongoing evaluation
+  status: Prototype · ongoing evaluation
   category: Practical vision systems
-  method: 'Florence-2 grounds target descriptions in candidate image regions. Lens candidates are refined through
-    edge, radial, and circular-structure checks into a center and target circle. Sensor localization proceeds in
-    two stages: an outer region defines a cropped AOI, the inner active region is localized and geometrically checked
-    within it, and the refined ROI is mapped back to the original image.'
-  image: semantic-geometric-localization.svg
-  alt: Recorded prompt excerpts connect by color and arrows to lens and sensor regions. A dashed schematic lens
-    candidate is refined to the recorded circle and center. Blue sensor outer ROI defines a crop, red inner ROI
-    is checked inside it and mapped back to the full image.
-  caption: Semantic grounding and geometry-constrained localization. Archived prototypes with explanatory overlays;
-    the lens candidate outline is schematic, and the final geometry and chip ROIs follow recorded outputs.
+  method: Florence-2 grounds target descriptions in candidate regions. Edge, radial, and concentric constraints
+    refine lens candidates into centers and target circles. For sensors, an outer crop supports inner-region
+    localization before the ROI is mapped back to the full image.
+  image: semantic-geometric-overview.svg
+  full_image: semantic-geometric-localization.svg
+  alt: A teal lens description identifies a schematic candidate box before geometric circle refinement. Blue
+    sensor-window grounding defines an outer region; red sensor-screen grounding locates the inner ROI in its
+    crop, then maps it back to image coordinates.
+  caption: Semantic grounding and geometric refinement · archived prototypes.
   illustration: true
-  image_width: 1440
-  image_height: 1220
-  result: Semantic grounding identifies the target and its approximate location; geometric and texture constraints
-    select the actual inspection region. Implemented C++ and Python API prototypes provide ROI outputs and diagnostic
-    visualizations. Archived examples show the coarse-to-fine workflow; transfer across components remains under
-    evaluation.
-  mobile_image: semantic-geometric-localization-mobile.svg
-  mobile_width: 720
-  mobile_height: 2140
+  image_width: 820
+  image_height: 770
+  result: C++ and Python prototypes produce geometry-constrained inspection regions. Evaluation across components
+    is ongoing.
 earlier_projects:
 - id: grade2seg
   name: Grade2Seg · weakly supervised weed segmentation from severity grades

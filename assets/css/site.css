@@ -182,11 +182,6 @@ p + p { margin-top: 14px; }
 .project-detail img { width: 100%; max-height: 410px; object-fit: contain; border-radius: 10px; }
 .project-detail video { display: block; width: 100%; height: auto; border-radius: 10px; background: #141b19; }
 .illustrated-project .research-image-link { box-shadow: 0 3px 14px rgba(37, 55, 48, .055); }
-.project-detail.illustrated-project { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 0; }
-.illustrated-project .project-heading { grid-column: 1; grid-row: 1; }
-.illustrated-project .project-figures { grid-column: 1; grid-row: 2; width: 100%; max-width: none; }
-.illustrated-project .project-description { grid-column: 1; grid-row: 3; margin-top: 20px; max-width: 90ch; }
-.illustrated-project img { max-height: none; }
 .research-image-link picture { display: block; }
 .project-detail figcaption a { text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 9px; }

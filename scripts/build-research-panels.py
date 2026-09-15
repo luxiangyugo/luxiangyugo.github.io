@@ -167,4 +167,48 @@ s.arrow(225,1910,382,1910,RED)
 s.text(400,2040,'3 · Mapped result',28,weight=600)
 s.text(28,2110,'Blue: outer ROI · Red: final inner ROI / circle',26,MUTED)
 s.save('semantic-geometric-localization-mobile.svg')
-print('Four source-based SVG panels built; no synthetic image content or curves.')
+# Compact page figures: the detailed plates above remain available on click.
+# These are comparisons of the same archived pixels, with no new inference.
+s=SVG(820,558,'Polar–Fourier separation of normal lens structure and local response')
+s.text(30,48,'Polar–Fourier separation',34,weight=600)
+for x,im,title in [(30,local[0],'Input'),(302,local[1],'Background'),(574,local[2],'Local response')]:
+ s.text(x,100,title,29,weight=500)
+ s.image(im,x,124,216,386)
+s.save('polar-fourier-overview.svg')
+
+# A shared context crop enlarges the sensor region in the small page figure.
+# Geometry is transformed from the same archived full-image coordinates.
+context_box=(200,175,700,575)
+chip_context=chip.crop(context_box)
+def compact_chip(s,x,y,mode):
+ im=aoi if mode=='aoi' else chip_context
+ bounds=crop if mode=='aoi' else context_box
+ w=216;h=w*im.height/im.width
+ s.image(im,x,y,w,h)
+ for box,col in ([(inner,RED)] if mode=='aoi' else [(outer,BLUE)]+([(inner,RED)] if mode=='mapped' else [])):
+  l,t,r,b=box;k=w/im.width
+  s.rect(x+(l-bounds[0])*k,y+(t-bounds[1])*k,(r-l)*k,(b-t)*k,col,stroke=3)
+
+s=SVG(820,770,'Semantic proposals refined into lens geometry and two-stage sensor ROIs')
+s.text(30,48,'Florence-2 → geometry',34,weight=600)
+s.text(30,110,'“circular camera lens”',29,TEAL,500)
+lens_view(s,30,137,238)
+lens_view(s,552,137,238,True)
+s.text(410,233,'Geometry',29,MUTED,anchor='middle')
+s.arrow(296,262,522,262)
+s.text(30,416,'Proposal (schematic)',26,TEAL)
+s.text(552,416,'Center + circle',29,RED)
+s.path([(30,453),(790,453)],'#c5d6cf',1)
+s.text(30,500,'“sensor window”',27,BLUE,500)
+s.text(302,500,'“sensor screen”',27,RED,500)
+s.text(574,500,'Mapped ROI',29,weight=500)
+compact_chip(s,30,527,'outer')
+compact_chip(s,302,539,'aoi')
+compact_chip(s,574,527,'mapped')
+s.arrow(255,608,291,608,BLUE)
+s.arrow(527,608,563,608,RED)
+s.text(30,738,'Outer region',27,BLUE)
+s.text(302,738,'Crop + inner ROI',27,RED)
+s.text(574,738,'Image coordinates',26,MUTED)
+s.save('semantic-geometric-overview.svg')
+print('Detailed plates and two compact overviews built from archived source pixels.')

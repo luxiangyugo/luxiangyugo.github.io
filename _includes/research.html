@@ -1,5 +1,6 @@
 {% assign projects = include.projects | default: site.data.research.projects %}
 {% for project in projects %}
+{% assign full_image = project.full_image | default: project.image %}
 <article class="project-detail{% if project.illustration %} illustrated-project{% endif %}" id="{{ project.id }}">
   <div class="project-heading">
     <h3>{% if project.archive_number %}<span class="project-number">{{ project.archive_number }}.</span> {% endif %}{{ project.name }}</h3>
@@ -15,9 +16,9 @@
     <figure>
       {% if project.video %}<video controls muted playsinline preload="none" poster="{{ '/assets/images/' | append: project.image | relative_url }}" width="{{ project.image_width }}" height="{{ project.image_height }}" aria-label="{{ project.name | escape }}" aria-describedby="{{ project.id }}-caption"><source src="{{ project.video | relative_url }}" type="video/mp4"><a href="{{ project.video | relative_url }}">Watch the original mechanism animation</a></video>
       {% else %}
-      <a class="research-image-link" href="{{ '/assets/images/' | append: project.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full image: {{ project.name | escape }}"><picture>{% if project.mobile_image %}<source media="(max-width: 760px)" srcset="{{ '/assets/images/' | append: project.mobile_image | relative_url }}" width="{{ project.mobile_width }}" height="{{ project.mobile_height }}">{% endif %}<img src="{{ '/assets/images/' | append: project.image | relative_url }}" alt="{{ project.alt | escape }}" loading="lazy"{% if project.image_width %} width="{{ project.image_width }}" height="{{ project.image_height }}"{% endif %}></picture></a>
+      <a class="research-image-link" href="{{ '/assets/images/' | append: full_image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full image: {{ project.name | escape }}"><picture>{% if project.mobile_image %}<source media="(max-width: 760px)" srcset="{{ '/assets/images/' | append: project.mobile_image | relative_url }}" width="{{ project.mobile_width }}" height="{{ project.mobile_height }}">{% endif %}<img src="{{ '/assets/images/' | append: project.image | relative_url }}" alt="{{ project.alt | escape }}" loading="lazy"{% if project.image_width %} width="{{ project.image_width }}" height="{{ project.image_height }}"{% endif %}></picture></a>
       {% endif %}
-      <figcaption id="{{ project.id }}-caption">{{ project.caption }} <a href="{{ '/assets/images/' | append: project.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full image: {{ project.name | escape }}">{% if project.video %}View still frame{% else %}View full image{% endif %}</a></figcaption>
+      <figcaption id="{{ project.id }}-caption">{{ project.caption }} <a href="{{ '/assets/images/' | append: full_image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full image: {{ project.name | escape }}">{% if project.video %}View still frame{% elsif project.full_image %}View details{% else %}View full image{% endif %}</a></figcaption>
     </figure>
   </div>
 </article>
