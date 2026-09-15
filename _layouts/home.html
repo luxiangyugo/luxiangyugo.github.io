@@ -6,9 +6,9 @@ layout: default
     <img class="profile-photo" src="{{ '/assets/img/me2.jpg' | relative_url }}" alt="Xiangyu Lu" width="240" height="240" fetchpriority="high">
     <div class="profile-copy">
       <h1 id="profile-name">Xiangyu Lu <span lang="zh-CN">陆祥宇</span></h1>
-      <p class="position">Postdoctoral Researcher · Zhejiang University</p>
-      <p>I am a postdoctoral researcher at the ZJU-Hangzhou Global Scientific and Technological Innovation Center, Zhejiang University. My research focuses on computer vision for agricultural remote sensing and optical inspection.</p>
-      <p>I work on image super-resolution, weakly supervised segmentation, and geometry-guided visual localization. My current research studies multi-focus defect perception and few-shot anomaly detection in optical components.</p>
+      <p class="position">Postdoctoral Researcher</p>
+      <p>I am a postdoctoral researcher at <a href="{{ site.data.profile.unit_url }}" target="_blank" rel="noopener noreferrer">{{ site.data.profile.unit_short }}, {{ site.data.profile.institution }}</a>. My research focuses on computer vision for agricultural remote sensing and optical inspection.</p>
+      <p>I work on image super-resolution, weakly supervised segmentation, and multimodal visual localization. My current research studies multi-focus defect perception and few-shot anomaly detection in optical components.</p>
       <p>I received my Ph.D. from Zhejiang University in 2025 and conducted visiting doctoral research at the University of Toronto during 2024–2025.</p>
       <div class="profile-links"><a href="mailto:{{ site.data.profile.email }}">Email</a>{% for link in site.data.profile.social %}<a href="{{ link.url | escape }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>{% endfor %}</div>
     </div>

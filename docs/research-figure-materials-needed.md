@@ -2,7 +2,7 @@
 
 The spatial half now uses actual archived MFL104 prototype screenshots. Florence-2 uses actual inspection images, recorded prompt excerpts, and geometry traced from documented localization outputs. No generated image is used as experimental evidence.
 
-The requested cross-focus image strip and response curve cannot yet be completed from the material accessible in this task. The detailed plate, accessible by clicking the compact page figure, explicitly marks this missing evidence and does not draw a synthetic curve.
+The requested cross-focus image strip and response curve cannot yet be completed from the material accessible in this task. The detailed plate, accessible through the “Prototype outputs” button, explicitly marks this missing evidence and does not draw a synthetic curve. The current page illustration is explicitly conceptual and does not stand in for these missing measurements.
 
 The smallest useful addition is one matched MFL103 sample folder containing:
 

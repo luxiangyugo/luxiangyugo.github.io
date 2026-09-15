@@ -1,6 +1,6 @@
 ---
 layout: cv
-title: About
+title: CV
 section: about
 permalink: /cv
 ---

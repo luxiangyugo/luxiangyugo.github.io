@@ -3,6 +3,7 @@ layout: default
 ---
 <div class="wrap page-body">
   <header class="page-heading"><h1 id="research">Research</h1><p>Computational imaging and structured visual perception for optical inspection, agricultural remote sensing, and automated measurement.</p></header>
+  {% include funding.html %}
   <section class="research-group" aria-labelledby="current-research">
     <h2 id="current-research">Current research</h2>
     {% include research.html %}
@@ -11,5 +12,4 @@ layout: default
     <h2 id="earlier-research">Previous research</h2>
     {% include research.html projects=site.data.research.earlier_projects %}
   </section>
-  {% include funding.html %}
 </div>

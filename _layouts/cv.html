@@ -3,23 +3,22 @@ layout: default
 ---
 <div class="wrap page-body">
   <header class="page-heading"><h1>Curriculum Vitae</h1></header>
-  <section class="cv-profile"><h2>Xiangyu Lu <span lang="zh-CN">陆祥宇</span></h2><p>{{ site.data.profile.role }}<br>{{ site.data.profile.unit }}<br>{{ site.data.profile.institution }}</p><p><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p></section>
-  <section class="experience"><h2>Experience & Education</h2>
-    {% for item in site.data.profile.experience %}<article class="experience-row"><p class="date">{{ item.date }}</p><div><h3>{{ item.title }}</h3><p>{{ item.institution }}</p><p class="muted">{{ item.detail }}</p></div></article>{% endfor %}
+  <section class="cv-profile" aria-labelledby="cv-name">
+    <h2 id="cv-name">Xiangyu Lu <span lang="zh-CN">陆祥宇</span></h2>
+    <p>{{ site.data.profile.role }} · <a href="{{ site.data.profile.unit_url }}" target="_blank" rel="noopener noreferrer">{{ site.data.profile.unit_short }}, {{ site.data.profile.institution }}</a></p>
+    <p><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p>
+    <div class="project-links cv-downloads" aria-label="Download CV PDFs">
+      <a href="{{ '/assets/XiangyuLu_CV_20250710_En.pdf' | relative_url }}" download>English PDF · 2025.07.10</a>
+      <a href="{{ site.data.cv_zh.download | relative_url }}" download lang="zh-CN">中文 PDF · {{ site.data.cv_zh.source_date }}</a>
+    </div>
   </section>
-  {% include funding.html %}
+  <section class="experience"><h2>Experience & Education</h2>
+    {% for item in site.data.profile.experience %}<article class="experience-row"><p class="date">{{ item.date }}</p><div><h3>{{ item.institution }}</h3><p>{{ item.title }}</p></div></article>{% endfor %}
+  </section>
   <section class="chinese-profile" id="chinese-profile" lang="zh-CN">
-    <div class="section-title"><h2>中文简历</h2><a href="{{ site.data.cv_zh.download | relative_url }}" target="_blank" rel="noopener noreferrer">下载 PDF · {{ site.data.cv_zh.source_date }}</a></div>
-    <p>{{ site.data.profile.intro_zh }}</p><p>{{ site.data.profile.background_zh }}</p>
-    <section class="cv-zh-section"><h3>研究方向</h3><p>{{ site.data.cv_zh.research }}</p></section>
-    <section class="cv-zh-section"><h3>教育与工作经历</h3>
-      {% for item in site.data.cv_zh.education %}<article class="experience-row"><p class="date">{{ item.date }}</p><div><h4>{{ item.institution }}</h4><p>{{ item.degree }}</p><p class="muted">{{ item.detail }}</p></div></article>{% endfor %}
-    </section>
-    <section class="cv-zh-section"><h3>研究项目</h3>
-      {% for item in site.data.cv_zh.projects %}<article class="cv-zh-project"><h4><a href="{{ item.url | relative_url }}">{{ item.name }}</a></h4><p class="muted">{{ item.date }}</p><p>{{ item.description }}</p></article>{% endfor %}
-    </section>
-    <section class="cv-zh-section"><h3>科研成果</h3><p>代表性工作涉及无人机图像超分辨率、稻田物候制图、作物病虫草害识别与光学检测。论文与授权专利按独立条目整理，并随新成果更新。</p><div class="project-links"><a href="{{ '/publications' | relative_url }}">论文列表</a><a href="{{ '/patents' | relative_url }}">授权专利</a></div></section>
-    <section class="cv-zh-section"><h3>奖励与荣誉</h3><ul>{% for item in site.data.cv_zh.honors %}<li>{{ item }}</li>{% endfor %}</ul></section>
-    <section class="cv-zh-section"><h3>学术与服务</h3><ul>{% for item in site.data.cv_zh.service %}<li>{{ item }}</li>{% endfor %}</ul><p>{{ site.data.cv_zh.skills }}</p></section>
+    <h2>中文简介</h2>
+    <p>陆祥宇，浙江大学杭州国际科创中心博士后。研究方向为农业遥感与光学检测中的计算机视觉，重点关注图像超分辨率、弱监督分割、多焦层缺陷感知和视觉语言多模态定位。</p>
+    <p>2025 年获浙江大学博士学位，曾在多伦多大学开展联合培养博士研究。</p>
+    <div class="project-links cv-downloads"><a href="{{ site.data.cv_zh.download | relative_url }}" download>下载中文 CV · {{ site.data.cv_zh.source_date }}</a></div>
   </section>
 </div>

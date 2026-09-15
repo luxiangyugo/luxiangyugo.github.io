@@ -1,43 +1,49 @@
 projects:
 - id: optical-focus
+  archive_number: 15
   name: Multi-focus defect perception in optical components
   status: Ongoing research
   category: Optical inspection
   method: Polar–Fourier modeling separates regular lens structure from local residuals. The reconstructed background
     preserves concentric patterns, while the residual emphasizes local deviations such as scratches and particles.
-  image: polar-fourier-overview.svg
-  full_image: polar-fourier-research.svg
-  alt: Three matched lens crops compare the input, reconstructed normal background, and alpha-weighted local response.
-  caption: Polar–Fourier separation · single-layer prototype.
+  image: polar-fourier-optics.png
+  alt: Concept illustration connecting a cutaway optical lens and annular inspection image to a Polar strip,
+    then Fourier separation into regular background and a local residual.
+  caption: Concept illustration · from lens image to Polar–Fourier separation.
   illustration: true
   context:
     label: Industry context
     name: Sunny Optical
     name_zh: 舜宇光学
     url: https://www.sunnyoptical.com/en/default.html
-  image_width: 820
-  image_height: 558
+  image_width: 1536
+  image_height: 1024
   result: Cross-focus analysis extends this structural prior to response strength and shape relative to normal
     focus evolution. Joint perception across focus layers is under development; persistence alone does not define
     a defect.
+  links:
+  - name: Prototype outputs
+    url: /assets/images/polar-fourier-research.svg
 - id: optical-roi
-  name: Geometry-guided optical localization with Florence-2
+  archive_number: 14
+  name: Multimodal optical localization with Florence-2
   status: Prototype · ongoing evaluation
-  category: Practical vision systems
-  method: Florence-2 grounds target descriptions in candidate regions. Edge, radial, and concentric constraints
-    refine lens candidates into centers and target circles. For sensors, an outer crop supports inner-region
-    localization before the ROI is mapped back to the full image.
-  image: semantic-geometric-overview.svg
-  full_image: semantic-geometric-localization.svg
-  alt: A teal lens description identifies a schematic candidate box before geometric circle refinement. Blue
-    sensor-window grounding defines an outer region; red sensor-screen grounding locates the inner ROI in its
-    crop, then maps it back to image coordinates.
-  caption: Semantic grounding and geometric refinement · archived prototypes.
+  category: Vision-language perception
+  method: Florence-2 combines inspection images with language prompts to identify lens and sensor regions.
+    Semantic grounding links each target description to a candidate location; for sensors, an outer-region
+    crop supports a second prompt for the inner active area.
+  image: florence2-multimodal-optics.png
+  alt: Concept illustration of Florence-2 grounding image and text together. Colored descriptions identify a
+    lens region and a sensor window; a second sensor-screen prompt targets the inner area within a cropped AOI.
+  caption: Concept illustration · image–text grounding with Florence-2.
   illustration: true
-  image_width: 820
-  image_height: 770
-  result: C++ and Python prototypes produce geometry-constrained inspection regions. Evaluation across components
-    is ongoing.
+  image_width: 1536
+  image_height: 1024
+  result: Geometric checks refine these semantic proposals into inspection ROIs. C++ and Python prototypes
+    support this workflow; evaluation across components is ongoing.
+  links:
+  - name: Prototype outputs
+    url: /assets/images/semantic-geometric-localization.svg
 earlier_projects:
 - id: grade2seg
   name: Grade2Seg · weakly supervised weed segmentation from severity grades

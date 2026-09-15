@@ -4,9 +4,13 @@ The Research page pairs every project with a figure. Newly restored historical f
 
 Grade2Seg and PaddySeg were re-encoded from their original full-resolution PNGs with alpha preserved, correcting an earlier conversion that rendered transparent regions black and obscured figure text.
 
-## Current source-based research panels
+## Current concept illustrations
 
-The page uses two compact figures beside the descriptions, matching the layout and text size of the historical projects. The same overview is used on desktop and mobile. Clicking either overview opens its detailed source plate. All figures use real archived inspection and prototype outputs, composed as SVG with embedded image panels and vector labels. No image-generation model was used to fabricate, retouch, or augment experimental content in these revisions.
+The page shows `polar-fourier-optics.png` and `florence2-multimodal-optics.png`, generated conceptual illustrations in the requested lens-cutaway style. They explain lens-to-Polar–Fourier transformation and multimodal semantic grounding. Captions explicitly identify them as concept illustrations. Clicking them opens the same image at full size; the separate “Prototype outputs” buttons open real archived outputs. See [final image prompts and provenance](optical-concept-figures-20260916.md).
+
+## Archived source-based overviews and linked prototype plates
+
+The earlier compact overviews below are preserved but no longer used as page thumbnails. Their detailed source plates remain publicly linked. All panels in these SVGs use real archived inspection and prototype outputs with vector labels. No image-generation model fabricated, retouched, or augmented this experimental content.
 
 - `assets/images/polar-fourier-overview.svg` shows only three matched image-space crops: input, reconstructed background, and local response. The local response is the recorded alpha-weighted signed perturbation. Polar-domain evidence and the cross-focus research-stage note remain in the linked detailed plate.
 - `assets/images/semantic-geometric-overview.svg` shows two short paths: lens proposal to geometric center/circle, and sensor outer region to cropped inner ROI to mapped ROI. Short, verbatim fragments of the recorded prompts use the same colors as the corresponding regions. The sensor context crop enlarges the region for page-size viewing; coordinate mapping is preserved. The lens proposal remains explicitly schematic.

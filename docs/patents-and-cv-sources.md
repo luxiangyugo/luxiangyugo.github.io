@@ -17,13 +17,15 @@ Updated from the owner's supplied certificate, CV dated 18 June 2026, the certif
 
 CN202010862936.0 is the application for CN112026237B and is not counted as a separate grant. The Chinese, US, and South African grants belong to the soil-tabletting family; the latter two retain PCT/CN2021/074639 as the international application identifier. No standalone worldwide PCT patent is claimed. The extra leading zero in the owner's US012104993B2 spelling is normalized to the printed US12104993B2.
 
-The three utility models are separately grouped. Their names, inventor order, applications, and dates come from the original public PDFs already linked in Research: CN212646487U, CN210503198U, and CN210050268U. The list does not present utility models as invention patents.
+The three utility models are separately grouped under the owner's requested display label “Utility patents”. Their names, inventor order, applications, and dates come from the original public PDFs already linked in Research: CN212646487U, CN210503198U, and CN210050268U. The underlying grant records are unchanged and remain separate from invention patents.
 
 Certificates and the Chinese CV are copied byte-for-byte. The signed source PDFs have not been edited or re-exported. Download paths use neutral public filenames under `assets/documents/`.
 
 ## Chinese CV and homepage
 
-The web CV follows the June 2026 attachment for education, project dates, honors, service, and skills. Toronto dates are now July 2024–June 2025. Current research and the awarded NSFC project reflect the owner's September instructions. The outdated patent total and broad, unspecific performance claim in the June CV are not repeated as current totals or general results; the dated PDF is preserved as supplied.
+The web CV is intentionally brief: four major experience/education entries, two short Chinese biography paragraphs, email and direct PDF downloads. The June 2026 Chinese PDF is linked as supplied; its projects, honors, service and skills are not expanded into the webpage. The original English PDF is also downloadable and explicitly dated 10 July 2025. Toronto dates are July 2024–June 2025. The navigation's Chinese anchor still opens the compact biography with its Chinese PDF download.
+
+Home and CV use the requested abbreviation “ZJU-HIC, Zhejiang University” linked to the [official English HIC website](https://hic.zju.edu.cn/hicenglish/). The Research funding block appears immediately after the Research overview and before Current research. Current projects are numbered 15 and 14, continuing the unchanged historical 13-to-1 sequence.
 
 The Chinese biography omits the NSFC approval number. The dedicated funding record retains its bibliographic details. News now records the grant award in September 2026 and CN117911382B in August 2026. Contact has been removed from navigation; existing email links in Home, CV, and the footer remain, and `/contact` is a short compatibility page.
 
