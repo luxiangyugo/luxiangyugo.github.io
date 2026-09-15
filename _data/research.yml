@@ -3,11 +3,9 @@ projects:
   name: Multi-focus defect perception in optical components
   status: Ongoing research
   category: Optical inspection
-  method: I study how lens defects appear, fade, or become obscured as the imaging focus changes. The work
-    combines concentric and periodic structure modeling with spatial–focus representations to distinguish abnormal
-    responses from the normal lens background.
-  contribution: I develop mechanism-based prototypes for multi-focus lens inspection under limited supervision,
-    connecting optical structure with focus-dependent appearance and subsequent model evaluation.
+  method: Lens defects produce focus-dependent responses superimposed on concentric and circumferentially periodic
+    backgrounds. Polar-coordinate analysis and robust Fourier modeling are being evaluated to separate regular
+    optical structure from localized residuals.
   image: multi-focus-optics.webp
   alt: Conceptual illustration of a cutaway lens assembly and three inspection images of the same lens at different
     focus indices, with a localized defect becoming sharper at one focus.
@@ -20,30 +18,56 @@ projects:
     url: https://www.sunnyoptical.com/en/default.html
   image_width: 1536
   image_height: 1024
+  result: Joint spatial–focus representations target defect localization and focus-layer attribution under
+    limited supervision. The mechanism-based prototypes provide interpretable structural residuals for subsequent
+    model design and evaluation.
 - id: optical-roi
-  name: Geometry-guided optical localization
+  name: Geometry-guided optical localization with Florence-2
   status: Implemented prototypes · ongoing evaluation
   category: Practical vision systems
-  method: I localize lens centers, inner and outer rings, and sensor-chip regions by refining visual proposals
-    with geometric, edge, and concentric-structure checks. Related work studies few-shot anomaly detection
-    and transfer across components and imaging conditions.
-  contribution: I develop localization methods and C++ and Python API implementations for integration, visualization,
-    and evaluation.
-  image: optical-localization.webp
-  alt: 'Conceptual illustration of lens and image sensor localization: concentric ring fits on a lens, a rectangular
-    fit on the sensor active area, and the proposal-to-geometry-to-refined-ROI workflow.'
-  caption: Concept illustration · geometry refines lens and sensor localization proposals.
+  method: Florence-2 provides semantic guidance and candidate regions for lenses and sensor chips. Edge consistency,
+    circular geometry, and concentric-structure constraints then verify and refine the proposals into lens
+    centers, inner/outer rings, and sensor ROIs.
+  image: optical-localization-florence2.webp
+  alt: Conceptual illustration of Florence-2 semantic guidance generating candidate lens and sensor regions,
+    followed by concentric-ring and rectangular-boundary refinement.
+  caption: Concept illustration · Florence-2 semantic proposals, geometry verification, and refined ROIs.
   illustration: true
   image_width: 1536
   image_height: 1024
+  result: The semantic-to-geometric pipeline connects component recognition with precise region extraction.
+    Implemented C++ and Python API prototypes provide ROI outputs and diagnostic visualizations for inspection-system
+    integration; transfer across components remains under evaluation.
+earlier_projects:
+- id: grade2seg
+  name: Grade2Seg · weakly supervised weed segmentation from severity grades
+  status: Research project · revision recorded in 2025
+  category: Weakly supervised learning
+  method: Image-level weed severity grades provide supervision for spatial segmentation. A Sqrt-Error-Weighted
+    ordinal objective learns severity-dependent responses; class activation maps are converted into pseudo-masks
+    for segmentation training.
+  image: grade2seg.webp
+  alt: Grade2Seg research diagram connecting weed severity classification, activation maps, pseudo-masks, and
+    segmentation.
+  caption: Research workflow · from image-level supervision to spatial predictions.
+  image_width: 2661
+  image_height: 1609
+  result: The workflow produces broadleaf and grass-weed masks from grade annotations, reducing reliance on
+    manually drawn pixel labels. Generalization across field conditions remains an evaluation focus.
+  links:
+  - name: UnderRevision
+    url: https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture
+    note: Revision status recorded on the previous homepage; link opens the journal.
+  - name: GitHub
+    url: https://github.com/luxiangyugo/WeedSeg
+  archive_number: 13
 - id: cropsr
   name: CropSR / EVADM
   status: Published · ISPRS JPRS 2024
   category: Image restoration
-  method: Effective variance attention-enhanced diffusion uses aerial-image variance patterns to guide super-resolution.
-    The work connects reconstruction quality with agricultural vision tasks.
-  contribution: First author. I developed the variance-aware super-resolution method and its cross-scale evaluation,
-    connecting image restoration to downstream perception.
+  method: Image variance decreases with increasing flight altitude, providing a scale-sensitive cue for aerial-image
+    restoration. Variance-Average-Spatial Attention (VASA) incorporates this cue into the iterative reconstruction
+    of the EVADM diffusion model.
   image: cropsr.webp
   alt: Original CropSR comparison figure showing a crop-field sample at high resolution, low resolution, and
     after super-resolution.
@@ -51,60 +75,79 @@ projects:
   links:
   - name: Paper
     url: https://doi.org/10.1016/j.isprsjprs.2024.08.017
-  - name: Code
+  - name: GitHub
     url: https://github.com/luxiangyugo/EVADM
   - name: Dataset
     url: https://data.mendeley.com/datasets/fhvph562cn
   image_width: 1200
   image_height: 1159
-- id: grade2seg
-  name: Grade2Seg
-  status: Research project
-  category: Weakly supervised learning
-  method: Ordinal learning, activation responses, and pseudo-masks connect inexpensive severity annotations
-    to weed segmentation, with attention to generalization across field conditions.
-  contribution: I study grade-to-segmentation learning and develop the dataset and modeling workflow to reduce
-    dependence on dense pixel annotations.
-  image: grade2seg.webp
-  alt: Grade2Seg research diagram connecting weed severity classification, activation maps, pseudo-masks, and
-    segmentation.
-  caption: Research workflow · from image-level supervision to spatial predictions.
-  image_width: 1000
-  image_height: 605
+  result: On the published real-image benchmarks, SRFI improved by 27% at ×2 and 6% at ×4 relative to the baselines.
+    Cross-dataset and downstream evaluations support restoration of fine crop structure for agricultural perception.
+  archive_number: 12
+- id: algal-mapping
+  name: UAV mapping of lake algal blooms
+  status: Research project · 2023
+  category: Environmental remote sensing
+  method: Cascaded waterbody and algal-bloom segmentation separates affected water regions from shoreline and
+    terrestrial backgrounds. Direct geo-location maps image detections into geographic coordinates.
+  image: algal-mapping.webp
+  alt: Original aerial lake map with spatial algal-bloom detections overlaid along the shoreline and surrounding
+    water.
+  caption: Original project visualization · algal-bloom mapping.
+  links:
+  - name: Project
+    url: https://github.com/luxiangyugo/AlgalDet
+  image_width: 1175
+  image_height: 822
+  result: The output is a spatial distribution map of algal-bloom regions, supporting rapid lake surveys and
+    targeted follow-up inspection.
+  archive_number: 11
 - id: paddyseg
-  name: PaddySeg & direct geo-location
+  name: PaddySeg · rice-field segmentation and phenology recognition
   status: Published · Drones 2023
   category: Agricultural remote sensing
-  method: A lightweight segmentation workflow combines phenology recognition with camera-based geo-location
-    and efficient feature sampling.
-  contribution: First author. I developed the segmentation and trait-mapping workflow to connect visual predictions
-    with field-scale observation.
+  method: Ghost Bilateral Network (GBiNet) combines efficient ghost-convolution features with bilateral segmentation
+    to identify rice regions and four phenological stages in UAV images.
   image: paddyseg.webp
   alt: Research diagram illustrating aerial field segmentation and direct geographic mapping of rice phenology.
   caption: Original research figure · segmentation and spatial mapping.
   links:
   - name: Paper
     url: https://doi.org/10.3390/drones7020083
-  - name: Code
+  - name: GitHub
     url: https://github.com/luxiangyugo/PaddySeg
-  secondary_image:
-    image: direct-geolocation.webp
-    alt: Original direct geo-location diagram connecting UAV position and camera projection to geographic coordinates
-      on the ground.
-    caption: Original research figure · camera-based direct geo-location.
-    width: 1903
-    height: 1251
-  image_width: 1100
-  image_height: 605
-earlier_projects:
+  image_width: 2512
+  image_height: 1381
+  result: GBiNet_r2 achieved 91.50% test mIoU on PaddySeg, compared with 90.95% for BiSeNetV2, with lower computational
+    cost. The resulting trait masks support field-scale phenology mapping.
+  archive_number: 10
+- id: direct-geolocation
+  name: Direct geo-location & incremental sparse sampling
+  status: Published · Drones 2023 · companion method to PaddySeg
+  category: Photogrammetry
+  method: Camera parameters and central projection map image pixels directly to ground coordinates. Incremental
+    sparse sampling removes redundant observations from overlapping UAV images before trait-map interpolation.
+  result: The published evaluation reported a mean deviation of 21 cm across 20 ground-control points, below
+    1% of relative flight height. This provides a direct route from UAV image sequences to georeferenced crop-trait
+    maps.
+  image: direct-geolocation.webp
+  alt: Original diagram of direct UAV image geo-location using camera projection and ground coordinates.
+  caption: Original research figure · direct geo-location and trait sampling.
+  links:
+  - name: Paper
+    url: https://doi.org/10.3390/drones7020083
+  - name: GitHub
+    url: https://github.com/luxiangyugo/PaddySeg
+  archive_number: 9
+  image_width: 1903
+  image_height: 1251
 - id: get
   name: GeT · grape leaf disease and pest diagnosis
   status: Published · JKSU-CIS 2022
   category: Plant health perception
-  method: Ghost-convolution features and a transformer encoder combine local symptom details with broader leaf
-    context for disease and pest classification. The work was evaluated using the GLDP12k grape-leaf image
-    dataset.
-  contribution: First author. I developed and evaluated the hybrid recognition model.
+  method: Ghost convolution extracts local symptom features with inexpensive linear operations; transformer
+    self-attention adds global context for grape-leaf disease and pest classification against complex field
+    backgrounds.
   image: get-model.webp
   alt: Original GeT model diagram showing the ghost-convolution backbone, transformer encoder, classification
     head, and grape-leaf activation maps.
@@ -112,48 +155,134 @@ earlier_projects:
   links:
   - name: Paper
     url: https://doi.org/10.1016/j.jksuci.2022.03.006
-  - name: Code
+  - name: GitHub
     url: https://github.com/luxiangyugo/GeT_model
   image_width: 2651
   image_height: 2104
-- id: algal-mapping
-  name: UAV mapping of lake algal blooms
-  status: Research project · 2023
-  category: Environmental remote sensing
-  method: Cascaded waterbody and algal-bloom segmentation identifies affected areas in UAV imagery. Direct
-    geo-location connects image-level detections to a geographic map of the lake.
-  image: algal-mapping.webp
-  alt: Original aerial lake map with spatial algal-bloom detections overlaid along the shoreline and surrounding
-    water.
-  caption: Original project visualization · algal-bloom mapping.
+  result: On GLDP12k, the ImageNet-initialized GeT model achieved 98.14% classification accuracy with 1.16
+    million parameters. The compact architecture supports efficient field-image diagnosis.
+  archive_number: 8
+- id: weighing-system
+  name: Cascaded 24-channel weighing system
+  status: Engineering project · 2020
+  category: Sensing systems
+  method: A cascaded I2C architecture links modular weighing nodes to a shared data-acquisition system. Low-power
+    Arduino Pro Mini controllers and plug-in PCBs provide a scalable hardware interface.
+  result: The implemented prototype acquires weight measurements across 24 channels, providing a modular basis
+    for parallel weighing experiments.
+  image: weighing-system.webp
+  alt: Original circuit and system diagram for the cascaded 24-channel weighing platform.
+  caption: Original project figure · modular weighing and data acquisition.
   links:
-  - name: Code
-    url: https://github.com/luxiangyugo/AlgalDet
-  image_width: 1175
-  image_height: 822
+  - name: Video
+    url: https://www.bilibili.com/video/BV1a8411P734/
+  archive_number: 7
+  image_width: 2678
+  image_height: 1824
 - id: citrus-sizing
   name: Vision-based citrus sizing
   status: Engineering project · 2020
   category: Visual measurement
-  method: HSV-based segmentation isolates citrus fruit against a controlled background. Image geometry and
-    pixel measurements are then used to estimate fruit diameter.
+  method: HSV segmentation isolates citrus fruit under controlled-background imaging. Bounding-box pixel dimensions
+    are converted into diameter estimates using the camera imaging geometry.
   image: citrus-sizing.webp
   alt: Original citrus sizing image showing individual fruit with measured outlines and diameter annotations.
   caption: Original project image · fruit segmentation and diameter estimates.
   image_width: 577
   image_height: 388
+  result: The workflow provides per-fruit outlines and size estimates for automated measurement; the original
+    calibration plot documents the pixel-to-diameter relationship.
+  links:
+  - name: Linear
+    url: /assets/img/r7_linearRelationship.png
+  archive_number: 6
 - id: libs
   name: LIBS sensing of soil heavy metals
   status: Undergraduate thesis · 2020
   category: Optical spectroscopy
-  method: Laser-induced breakdown spectroscopy (LIBS) is used to detect heavy metals in soil. I studied signal
-    enhancement through an argon environment and a light-convergence chamber, and designed a batch-testing
-    platform.
+  method: Laser-induced breakdown spectroscopy resolves soil-metal signatures from plasma emission spectra.
+    Argon-assisted excitation and a light-convergence chamber are evaluated for signal enhancement, with spectral
+    analysis identifying informative wavelength features.
   image: libs-spectroscopy.webp
   alt: Original LIBS figure showing principal-component loadings and spectral peaks against wavelength.
   caption: Original thesis figure · spectral features and signal analysis.
   links:
   - name: Slides
     url: /assets/img/r5_libs.pdf
+  - name: Patent
+    url: /assets/img/r5_CN212646487U.pdf
   image_width: 2121
   image_height: 1905
+  result: The batch-testing platform design combines sample handling and optical acquisition for laboratory
+    soil analysis. The linked slides and device patent document the spectroscopy and signal-collection approach.
+  archive_number: 5
+- id: seeding-device
+  name: Integrated seeding and fertilizing device
+  status: Engineering contest project · 2019
+  category: Agricultural automation
+  method: Coordinated motor and valve control combines seed metering with liquid-fertilizer application in
+    one mechanism.
+  result: The assembled prototype synchronizes seed delivery and spraying, demonstrating integrated electrical
+    control of two field operations.
+  image: seeding-device.webp
+  alt: Original photographs and structural illustration of the integrated seeding and fertilizing prototype.
+  caption: Original project figure · seeding, liquid delivery, and control.
+  archive_number: 4
+  image_width: 1340
+  image_height: 720
+- id: reciprocating-mechanism
+  name: Reciprocating mechanism using a curved-groove ball bearing
+  status: Mechanical design · 2019
+  category: Motion conversion
+  method: A curved-groove bearing mechanism converts rotary input into reciprocating linear motion through
+    constrained rolling contact.
+  result: The mechanical design and motion animation demonstrate an alternative rotary-to-linear transmission
+    concept for reciprocating machinery.
+  image: reciprocating-mechanism.png
+  alt: Frame from the original mechanism animation showing the curved groove, rolling elements, and drive shaft.
+  caption: Original mechanism animation · rotary input and reciprocating motion.
+  links:
+  - name: Patent
+    url: /assets/img/r4_CN210050268U.pdf
+  - name: Video
+    url: /assets/img/r4_rotation.mp4
+  video: /assets/img/r4_rotation.mp4
+  archive_number: 3
+  image_width: 1920
+  image_height: 1080
+- id: uav-weeds
+  name: Weed identification from UAV imagery
+  status: Undergraduate research project · 2018
+  category: Early-stage crop protection
+  method: A labeled UAV-image dataset covers five weed types in seedling-stage wheat fields. Real-time convolutional
+    models translate aerial observations into weed-category predictions.
+  result: The workflow connects aerial image acquisition, annotation, and recognition for field weed surveys.
+    The poster and related UAV spraying-device patent preserve the original project materials.
+  image: uav-weeds.webp
+  alt: Original UAV and field-image montage for weed identification in seedling-stage wheat fields.
+  caption: Original project image · UAV observation and weed recognition.
+  links:
+  - name: Poster
+    url: /assets/img/r1_poster.pdf
+  - name: Patent
+    url: /assets/img/r2_CN210503198U.pdf
+  archive_number: 2
+  image_width: 1080
+  image_height: 774
+- id: charging-network
+  name: Electric-vehicle charging-station network planning
+  status: Mathematical modeling project · ICM 2018
+  category: Spatial optimization
+  method: Polynomial curve fitting represents electric-vehicle growth, while a multi-objective location model
+    evaluates candidate charging-station configurations.
+  result: The MATLAB implementation produces spatial deployment scenarios for demand-oriented charging infrastructure
+    planning.
+  image: charging-network.webp
+  alt: Original spatial heat map from the electric-vehicle charging station location-planning study.
+  caption: Original modeling figure · charging-network location planning.
+  links:
+  - name: Thesis
+    url: /assets/img/r2_thesisICM.pdf
+  archive_number: 1
+  image_width: 1713
+  image_height: 1328

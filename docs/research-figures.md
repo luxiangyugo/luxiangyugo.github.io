@@ -2,12 +2,14 @@
 
 The Research page pairs every project with a figure. Newly restored historical figures are preserved and re-encoded losslessly as WebP; all labels, results, and content remain unchanged. Click any figure to inspect the full image.
 
+Grade2Seg and PaddySeg were re-encoded from their original full-resolution PNGs with alpha preserved, correcting an earlier conversion that rendered transparent regions black and obscured figure text.
+
 ## New conceptual illustrations
 
 Two original illustrations were generated with the built-in image_gen tool (not the API/CLI), for explaining ongoing work. They depict conceptual components and annotations, not a real apparatus, customer image, measured response, or validated segmentation result. Multi-focus z1–z3 labels denote focus indices, not calibrated physical depth. A Sunny Optical reference is presented separately as accessible webpage text.
 
 - `assets/images/multi-focus-optics.webp`: lens assembly, optical rays, and focus-dependent defect appearance.
-- `assets/images/optical-localization.webp`: concentric lens fits and sensor-region localization.
+- `assets/images/optical-localization-florence2.webp`: Florence-2 semantic proposals, geometry verification, and refined lens/sensor ROIs. The initial geometry-only illustration remains archived as `optical-localization.webp`.
 
 Industry reference: [Sunny Optical product categories](https://www.sunnyoptical.com/en/products.html) and [Sunny Instruments lens AOI example](https://www.sunny-instrument.com/en/products-detail/81). These support the lens manufacturing/inspection context; no product-specific design, specifications, performance claims, or company branding are copied. The company relationship wording follows the homepage owner's instructions.
 
@@ -43,4 +45,31 @@ Constraints: conceptual illustration only, no performance curves, no confidence 
 | citrus-sizing.webp | assets/img/r7_sizer.png | Citrus sizing project, 2020 |
 | libs-spectroscopy.webp | assets/img/r5_pca.png | LIBS undergraduate thesis, 2020 |
 
-Historical project descriptions come from the original public homepage backed up at commit c220b6cf7357e063525fdeb11d786d365565b9eb. Published work uses the corrected publication years already verified in the site's publication data. PaddySeg and direct geo-location remain one research entry, because they belong to the same publication. Original paper figures are not replaced by generated depictions of experimental results.
+Historical project descriptions come from the original public homepage backed up at commit c220b6cf7357e063525fdeb11d786d365565b9eb. All 13 original entries and their buttons are restored in the original order. Published work uses the corrected publication years already verified in the site's publication data. PaddySeg and direct geo-location are separately listed to retain the original structure, with a shared-publication note. Original paper figures are not replaced by generated depictions of experimental results.
+
+Additional restored assets:
+
+| Web asset | Original public asset | Context |
+| --- | --- | --- |
+| weighing-system.webp | assets/img/r6_weighingSystem.png | 24-channel weighing system |
+| seeding-device.webp | assets/img/r3_structure.jpg | Integrated seeding and fertilizing |
+| reciprocating-mechanism.png | assets/img/r4_rotation.mp4 | Unaltered still frame at 4 seconds, used as the original video's poster |
+| uav-weeds.webp | assets/img/r1_weedsUAV.jpg | Early UAV weed recognition |
+| charging-network.webp | assets/img/r2_hm.png | Charging-station network planning |
+
+## Florence-2 semantic-guidance revision
+
+The active localization figure was edited with the built-in image_gen tool, using the initial illustration as the reference. Final generated source: `C:/Users/luxy/.codex/generated_images/01a0a04e-e534-7a62-bd12-34aebc5224fa/exec-532f27b0-35be-4dcd-8f0b-15589285a659.png`. A copy is preserved at `../20260914/preview/optical-localization-florence2-original.png` relative to the main repository. The page uses `assets/images/optical-localization-florence2.webp` (1536 × 1024, WebP quality 92); conversion changes only the delivery format.
+
+### Semantic-guidance edit prompt
+
+Edit the supplied scientific illustration for the research entry "Geometry-guided optical localization with Florence-2". Keep the lens and sensor renderings, precise teal circles/rectangle, faint dashed proposal boxes, pale gray-sage backdrop, muted palette, composition and overall material style.
+Make Florence-2 semantic guidance explicit in the explanatory flow. Replace the bottom row with three readable, restrained steps connected by thin arrows:
+"Florence-2" with the smaller line "Semantic proposals"
+then "Geometry" with the smaller line "Boundary verification"
+then "Refined ROI".
+The three steps must remain inside the image with generous margins, no overflow and no overlap. Use clean dark sans-serif typography for all labels, including "Lens" and "Sensor" above the physical objects. Add a small restrained text label "lens" attached to the left dashed candidate box and "sensor" attached to the right dashed box, to visually show semantic object identities; keep them readable and inconspicuous. Preserve all physical objects and geometry overlays. Do not imply Florence-2 directly performs the final circle fit; the flow must clearly distinguish semantic proposal generation from geometric refinement. No invented numerical results, brand logos, elaborate neural network drawing, badges, extra decoration, or additional text. Keep landscape 3:2 ratio. This remains a conceptual illustration, not a measurement screenshot.
+
+### Typography correction prompt
+
+Make one typographic correction only to the supplied illustration. The bottom-right label currently has a duplicated final letter and must read exactly "Refined ROI" — spell the acronym R, O, I, with exactly one final I. Use the same clean sans-serif style. Preserve everything else without any change: physical lens, sensor, annotations, all other text ("Florence-2", "Semantic proposals", "Geometry", "Boundary verification", "Lens", "Sensor", small "lens" and "sensor"), arrows, layout, colors, lighting, image size. Do not add any extra characters or labels.

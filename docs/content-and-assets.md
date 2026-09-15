@@ -18,7 +18,7 @@ The navigation and profile links use CSS backdrop blur with a near-opaque fallba
 
 - `_layouts/home.html`: the short homepage introduction and news placement.
 - `_data/profile.yml`: public profile, Chinese introduction, links, and experience.
-- `_data/research.yml`: current/selected and earlier projects, their status, figure descriptions, source links, and image dimensions. Each project needs a figure.
+- `_data/research.yml`: current optical projects and all 13 entries from the previous Research page, in their original order. `method` and `result` describe technical mechanisms, supported findings, and applications without first-person contribution statements. Each project needs a figure or a video with a poster image.
 - `_data/publications.yml`: published articles, full author lists, DOI links, and citations. Metadata was checked against Crossref on 14 September 2026. Selected homepage entries shorten the author list; complete authors remain on the Publications page.
 - `_data/funding.yml`: NSFC Category C project 32602720, awarded and scheduled for 2027–2029.
 - `_data/gallery.yml`: photographs on the Hobbies page. No dates or locations are inferred from the images.
@@ -42,7 +42,9 @@ The homepage uses the original `assets/img/me2.jpg` portrait. WebP derivatives o
 
 Original assets and licensing files are preserved. The CropSR comparison figure is displayed intact.
 
-Research now includes nine projects and ten figures. Two new conceptual illustrations cover multi-focus lens inspection and geometry-guided lens/sensor localization. Four earlier projects restore GeT grape-leaf diagnosis, algal-bloom mapping, citrus sizing, and LIBS spectroscopy; a second figure for PaddySeg explains direct geo-location. Every image links to its full-size version. Mobile layouts show the project title, image, and then the method description.
+Research includes two current optical projects followed by all 13 previous entries, retaining their original 13-to-1 numbering. All 20 original button labels and destinations are restored, including papers, repositories, datasets, videos, slides, patents, the calibration plot, poster, and thesis. The mechanism animation retains its original video and has a still-frame poster. The old `#research` anchor is preserved. The original `UnderRevision` button is retained with an explicit historical status date, not presented as a newly verified submission status.
+
+PaddySeg and direct geo-location are separate entries as on the old page; the latter is explicitly a companion method from the same paper. Publication years follow the verified bibliography. Two conceptual illustrations cover multi-focus lens inspection and Florence-2 semantic guidance followed by geometry-based ROI refinement. Mobile layouts show each title, figure, and technical description in sequence. See [technical copy sources](research-copy-sources.md) for the published results used in the summaries.
 
 See [research figure sources and generation prompts](research-figures.md) for provenance and the distinction between original research figures and generated conceptual illustrations. Sunny Optical is currently labeled as industry context; no formal collaboration, sponsorship, or product-performance claim is inferred.
 

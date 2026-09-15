@@ -2,24 +2,23 @@
 {% for project in projects %}
 <article class="project-detail{% if project.illustration %} illustrated-project{% endif %}" id="{{ project.id }}">
   <div class="project-heading">
-    <h3>{{ project.name }}</h3>
+    <h3>{% if project.archive_number %}<span class="project-number">{{ project.archive_number }}.</span> {% endif %}{{ project.name }}</h3>
     <p class="project-status">{{ project.status }}</p>
     {% if project.context %}<p class="project-context">{{ project.context.label }} · <a href="{{ project.context.url }}" target="_blank" rel="noopener noreferrer">{{ project.context.name }} <span lang="zh-CN">{{ project.context.name_zh }}</span></a></p>{% endif %}
   </div>
   <div class="project-description">
     <p>{{ project.method }}</p>
-    {% if project.contribution %}<p>{{ project.contribution }}</p>{% endif %}
-    {% if project.links %}<div class="project-links">{% for link in project.links %}<a href="{{ link.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>{% endfor %}</div>{% endif %}
+    {% if project.result %}<p>{{ project.result }}</p>{% endif %}
+    {% if project.links %}<div class="project-links">{% for link in project.links %}<a href="{{ link.url | relative_url }}" target="_blank" rel="noopener noreferrer"{% if link.note %} title="{{ link.note | escape }}"{% endif %}>{{ link.name }}</a>{% endfor %}</div>{% endif %}
   </div>
   <div class="project-figures">
     <figure>
+      {% if project.video %}<video controls muted playsinline preload="none" poster="{{ '/assets/images/' | append: project.image | relative_url }}" width="{{ project.image_width }}" height="{{ project.image_height }}" aria-label="{{ project.name | escape }}" aria-describedby="{{ project.id }}-caption"><source src="{{ project.video | relative_url }}" type="video/mp4"><a href="{{ project.video | relative_url }}">Watch the original mechanism animation</a></video>
+      {% else %}
       <a class="research-image-link" href="{{ '/assets/images/' | append: project.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full image: {{ project.name | escape }}"><img src="{{ '/assets/images/' | append: project.image | relative_url }}" alt="{{ project.alt | escape }}" loading="lazy"{% if project.image_width %} width="{{ project.image_width }}" height="{{ project.image_height }}"{% endif %}></a>
-      <figcaption>{{ project.caption }} <a href="{{ '/assets/images/' | append: project.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full image: {{ project.name | escape }}">View full image</a></figcaption>
+      {% endif %}
+      <figcaption id="{{ project.id }}-caption">{{ project.caption }} <a href="{{ '/assets/images/' | append: project.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full image: {{ project.name | escape }}">{% if project.video %}View still frame{% else %}View full image{% endif %}</a></figcaption>
     </figure>
-    {% if project.secondary_image %}<figure>
-      <a class="research-image-link" href="{{ '/assets/images/' | append: project.secondary_image.image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full image: direct geo-location"><img src="{{ '/assets/images/' | append: project.secondary_image.image | relative_url }}" alt="{{ project.secondary_image.alt | escape }}" loading="lazy" width="{{ project.secondary_image.width }}" height="{{ project.secondary_image.height }}"></a>
-      <figcaption>{{ project.secondary_image.caption }} <a href="{{ '/assets/images/' | append: project.secondary_image.image | relative_url }}" target="_blank" rel="noopener noreferrer">View full image</a></figcaption>
-    </figure>{% endif %}
   </div>
 </article>
 {% endfor %}

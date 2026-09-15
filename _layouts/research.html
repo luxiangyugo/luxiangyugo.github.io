@@ -2,13 +2,13 @@
 layout: default
 ---
 <div class="wrap page-body">
-  <header class="page-heading"><h1>Research</h1><p>My research focuses on reliable visual perception under challenging imaging conditions, with applications in agricultural remote sensing and optical inspection.</p></header>
+  <header class="page-heading"><h1 id="research">Research</h1><p>Computational imaging and structured visual perception for optical inspection, agricultural remote sensing, and automated measurement.</p></header>
   <section class="research-group" aria-labelledby="current-research">
-    <h2 id="current-research">Current & selected research</h2>
+    <h2 id="current-research">Current research</h2>
     {% include research.html %}
   </section>
   <section class="research-group" aria-labelledby="earlier-research">
-    <h2 id="earlier-research">Earlier research</h2>
+    <h2 id="earlier-research">Previous research</h2>
     {% include research.html projects=site.data.research.earlier_projects %}
   </section>
   {% include funding.html %}
