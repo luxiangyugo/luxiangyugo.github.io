@@ -1,83 +1,64 @@
-themes:
-  - number: '01'
-    title: Make the invisible visible.
-    label: Imaging & visual enhancement
-    description: Understand how images degrade, and recover the detail and structure that recognition needs.
-    anchor: cropsr
-  - number: '02'
-    title: Learn more from less.
-    label: Annotation-efficient learning
-    description: Turn image-level grades and a few examples into useful localization and segmentation.
-    anchor: grade2seg
-  - number: '03'
-    title: Let structure guide vision.
-    label: Structured optical inspection
-    description: Use geometry and focus-dependent information to distinguish anomalies from complex backgrounds.
-    anchor: optical-focus
 projects:
-  - id: optical-focus
-    number: '01'
-    title: Looking through the layers.
-    name: Multi-focus defect perception
-    status: Ongoing research
-    category: Optical inspection
-    summary: A defect can emerge, fade, or hide as focus changes. I investigate what these changing responses reveal beyond a single image.
-    method: Current work explores structure-aware background modeling and joint spatial–focus representations under limited supervision. The aim is to separate normal optical structure from anomalous responses.
-    contribution: I develop mechanism-based prototypes that connect spatial structure with focus-dependent appearance, supporting subsequent model design and evaluation.
-  - id: cropsr
-    number: '02'
-    title: Recovering the details that matter.
-    name: CropSR / EVADM
-    status: Published · ISPRS JPRS 2024
-    category: Image restoration
-    summary: Aerial imagery captures the field, but small structures can disappear. Variance-aware diffusion helps restore the details that agricultural perception depends on.
-    method: Effective variance attention-enhanced diffusion uses aerial-image variance patterns to guide super-resolution. The work connects reconstruction quality with agricultural vision tasks.
-    contribution: First author. I developed the variance-aware super-resolution method and its cross-scale evaluation, connecting image restoration to downstream perception.
-    image: cropsr.webp
-    alt: Original CropSR comparison figure showing a crop-field sample at high resolution, low resolution, and after super-resolution.
-    caption: Original research figure · HR / LR / SR, top to bottom.
-    links:
-      - name: Paper
-        url: https://doi.org/10.1016/j.isprsjprs.2024.08.017
-      - name: Code
-        url: https://github.com/luxiangyugo/EVADM
-      - name: Dataset
-        url: https://data.mendeley.com/datasets/fhvph562cn
-  - id: grade2seg
-    number: '03'
-    title: From severity to spatial understanding.
-    name: Grade2Seg
-    status: Research project
-    category: Weakly supervised learning
-    summary: Can a simple weed-severity grade teach a model where the weeds are? Grade2Seg connects image-level grades with spatial segmentation.
-    method: Ordinal learning, activation responses, and pseudo-masks connect inexpensive severity annotations to weed segmentation, with attention to generalization across field conditions.
-    contribution: I study grade-to-segmentation learning and develop the dataset and modeling workflow to reduce dependence on dense pixel annotations.
-    image: grade2seg.webp
-    alt: Grade2Seg research diagram connecting weed severity classification, activation maps, pseudo-masks, and segmentation.
-    caption: Research workflow · from image-level supervision to spatial predictions.
-  - id: optical-roi
-    number: '04'
-    title: Geometry meets visual learning.
-    name: Geometry-guided optical localization
-    status: Implemented prototypes · ongoing evaluation
-    category: Practical vision systems
-    summary: Semantic proposals find the candidate. Geometry checks whether it makes sense. Together, they support robust lens and sensor-chip localization.
-    method: Geometric, edge, and concentric-structure checks refine semantic proposals. Related work studies few-shot anomaly detection, transfer to new components, and appearance variation across batches.
-    contribution: I develop localization methods and C++ and Python API implementations for integration, visualization, and evaluation.
-  - id: paddyseg
-    number: '05'
-    title: From individual frames to field maps.
-    name: PaddySeg & direct geo-location
-    status: Published · Drones 2023
-    category: Agricultural remote sensing
-    summary: Efficient rice-field segmentation and direct geo-location connect UAV image sequences with spatial maps of crop development.
-    method: A lightweight segmentation workflow combines phenology recognition with camera-based geo-location and efficient feature sampling.
-    contribution: First author. I developed the segmentation and trait-mapping workflow to connect visual predictions with field-scale observation.
-    image: paddyseg.webp
-    alt: Research diagram illustrating aerial field segmentation and direct geographic mapping of rice phenology.
-    caption: Original research figure · segmentation and spatial mapping.
-    links:
-      - name: Paper
-        url: https://doi.org/10.3390/drones7020083
-      - name: Code
-        url: https://github.com/luxiangyugo/PaddySeg
+- id: optical-focus
+  name: Multi-focus defect perception
+  status: Ongoing research
+  category: Optical inspection
+  method: Current work explores structure-aware background modeling and joint spatial–focus representations
+    under limited supervision. The aim is to separate normal optical structure from anomalous responses.
+  contribution: I develop mechanism-based prototypes that connect spatial structure with focus-dependent
+    appearance, supporting subsequent model design and evaluation.
+- id: cropsr
+  name: CropSR / EVADM
+  status: Published · ISPRS JPRS 2024
+  category: Image restoration
+  method: Effective variance attention-enhanced diffusion uses aerial-image variance patterns to guide
+    super-resolution. The work connects reconstruction quality with agricultural vision tasks.
+  contribution: First author. I developed the variance-aware super-resolution method and its cross-scale
+    evaluation, connecting image restoration to downstream perception.
+  image: cropsr.webp
+  alt: Original CropSR comparison figure showing a crop-field sample at high resolution, low resolution,
+    and after super-resolution.
+  caption: Original research figure · HR / LR / SR, top to bottom.
+  links:
+  - name: Paper
+    url: https://doi.org/10.1016/j.isprsjprs.2024.08.017
+  - name: Code
+    url: https://github.com/luxiangyugo/EVADM
+  - name: Dataset
+    url: https://data.mendeley.com/datasets/fhvph562cn
+- id: grade2seg
+  name: Grade2Seg
+  status: Research project
+  category: Weakly supervised learning
+  method: Ordinal learning, activation responses, and pseudo-masks connect inexpensive severity annotations
+    to weed segmentation, with attention to generalization across field conditions.
+  contribution: I study grade-to-segmentation learning and develop the dataset and modeling workflow to
+    reduce dependence on dense pixel annotations.
+  image: grade2seg.webp
+  alt: Grade2Seg research diagram connecting weed severity classification, activation maps, pseudo-masks,
+    and segmentation.
+  caption: Research workflow · from image-level supervision to spatial predictions.
+- id: optical-roi
+  name: Geometry-guided optical localization
+  status: Implemented prototypes · ongoing evaluation
+  category: Practical vision systems
+  method: Geometric, edge, and concentric-structure checks refine semantic proposals. Related work studies
+    few-shot anomaly detection, transfer to new components, and appearance variation across batches.
+  contribution: I develop localization methods and C++ and Python API implementations for integration,
+    visualization, and evaluation.
+- id: paddyseg
+  name: PaddySeg & direct geo-location
+  status: Published · Drones 2023
+  category: Agricultural remote sensing
+  method: A lightweight segmentation workflow combines phenology recognition with camera-based geo-location
+    and efficient feature sampling.
+  contribution: First author. I developed the segmentation and trait-mapping workflow to connect visual
+    predictions with field-scale observation.
+  image: paddyseg.webp
+  alt: Research diagram illustrating aerial field segmentation and direct geographic mapping of rice phenology.
+  caption: Original research figure · segmentation and spatial mapping.
+  links:
+  - name: Paper
+    url: https://doi.org/10.3390/drones7020083
+  - name: Code
+    url: https://github.com/luxiangyugo/PaddySeg

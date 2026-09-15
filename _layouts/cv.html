@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-<div class="wrap page-body"><header class="page-heading"><p class="eyebrow">ABOUT / XIANGYU LU <span lang="zh-CN">陆祥宇</span></p><h1>A curiosity that<br><em>crosses scales.</em></h1><p class="lead">Postdoctoral Researcher · Zhejiang University</p></header><div class="about-main"><div class="about-prose"><p>I am a postdoctoral researcher at Zhejiang University, based at the ZJU-Hangzhou Global Scientific and Technological Innovation Center. My research focuses on reliable visual perception under challenging imaging conditions, with applications in agricultural remote sensing and optical inspection.</p><p>I work on image restoration and super-resolution, annotation-efficient segmentation, and structure-aware visual analysis. My current research explores multi-focus defect perception and the transfer of visual models across optical components and imaging conditions. I also develop geometric verification methods and software interfaces that connect vision algorithms with practical inspection workflows.</p><p>I received my Ph.D. in Agricultural Electrification and Automation from Zhejiang University in 2025 and conducted visiting doctoral research at the University of Toronto during 2024–2025. I am the principal investigator of an awarded NSFC Young Scientists Fund (Category C) project on imaging degradation and early-stage weed perception, scheduled for 2027–2029.</p><a class="text-link" href="{{ '/contact' | relative_url }}">Get in touch ↗</a></div><figure><img src="{{ '/assets/images/portrait.webp' | relative_url }}" alt="Xiangyu Lu outdoors against a city skyline." width="800" height="533"><figcaption>XIANGYU LU / HANGZHOU, CHINA</figcaption></figure></div>
-<section class="chinese-profile" id="chinese-profile" lang="zh-CN"><h2>复杂成像条件下的可靠视觉感知</h2><p>{{ site.data.profile.intro_zh }}</p><p>{{ site.data.profile.background_zh }}</p></section>
-<section class="experience"><p class="eyebrow">EXPERIENCE & EDUCATION</p><h2>A path through sensing.</h2>{% for item in site.data.profile.experience %}<article class="experience-row"><p class="date">{{ item.date }}</p><div><h3>{{ item.title }}</h3><h4>{{ item.institution }}</h4><p>{{ item.detail }}</p></div></article>{% endfor %}</section>
-<div class="about-funding">{% include funding.html %}<p class="funding-title">{{ site.data.funding.title }}<br><span lang="zh-CN">{{ site.data.funding.title_zh }}</span></p></div></div>
+<div class="wrap page-body">
+  <header class="page-heading"><h1>Curriculum Vitae</h1></header>
+  <section class="cv-profile"><h2>Xiangyu Lu <span lang="zh-CN">陆祥宇</span></h2><p>{{ site.data.profile.role }}<br>{{ site.data.profile.unit }}<br>{{ site.data.profile.institution }}</p><p><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p></section>
+  <section class="experience"><h2>Experience & Education</h2>
+    {% for item in site.data.profile.experience %}<article class="experience-row"><p class="date">{{ item.date }}</p><div><h3>{{ item.title }}</h3><p>{{ item.institution }}</p><p class="muted">{{ item.detail }}</p></div></article>{% endfor %}
+  </section>
+  {% include funding.html %}
+  <section class="chinese-profile" id="chinese-profile" lang="zh-CN"><h2>中文简介</h2><p>{{ site.data.profile.intro_zh }}</p><p>{{ site.data.profile.background_zh }}</p></section>
+</div>

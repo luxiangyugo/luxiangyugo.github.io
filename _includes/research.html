@@ -1,6 +1,12 @@
 {% for project in site.data.research.projects %}
-<article class="project-detail" id="{{ project.id }}"><div><p class="eyebrow">{{ project.number }} / {{ project.category | upcase }}</p><h2>{{ project.title }}</h2><span class="status">{{ project.status }}</span><p>{{ project.summary }}</p><h3>{{ project.name }}</h3><p>{{ project.method }}</p><h3>My contribution</h3><p>{{ project.contribution }}</p>{% if project.links %}<div class="project-links">{% for link in project.links %}<a class="text-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }} ↗</a>{% endfor %}</div>{% endif %}</div>
-{% if project.id == 'optical-focus' %}{% include focus-explorer.html id='research' %}
-{% elsif project.image %}<figure><img src="{{ '/assets/images/' | append: project.image | relative_url }}" alt="{{ project.alt }}" width="1200" height="{% if project.id == 'cropsr' %}1159{% else %}660{% endif %}" loading="lazy"><figcaption>{{ project.caption }}</figcaption></figure>
-{% else %}<div class="roi-diagram"><div class="roi-circles" role="img" aria-label="Concept diagram of a geometrically verified circular lens region inside a candidate rectangle."></div><div class="roi-steps"><span>Semantic proposal</span><span aria-hidden="true">→</span><span>Geometry check</span><span aria-hidden="true">→</span><span>Verified ROI</span></div><small>METHOD CONCEPT · NOT EXPERIMENTAL OUTPUT</small></div>{% endif %}
-</article>{% endfor %}
+<article class="project-detail {% unless project.image %}text-only{% endunless %}" id="{{ project.id }}">
+  <div>
+    <h2>{{ project.name }}</h2>
+    <p class="project-status">{{ project.status }}</p>
+    <p>{{ project.method }}</p>
+    <p>{{ project.contribution }}</p>
+    {% if project.links %}<div class="project-links">{% for link in project.links %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>{% endfor %}</div>{% endif %}
+  </div>
+  {% if project.image %}<figure><img src="{{ '/assets/images/' | append: project.image | relative_url }}" alt="{{ project.alt }}" loading="lazy"><figcaption>{{ project.caption }}</figcaption></figure>{% endif %}
+</article>
+{% endfor %}

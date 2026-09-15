@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
-  <meta name="theme-color" content="#f5f3ed">
+  <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
@@ -12,8 +12,7 @@
   <meta property="og:image" content="{{ '/assets/images/portrait.webp' | absolute_url }}">
   <meta property="og:image:alt" content="Xiangyu Lu">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
-  {% if page.layout == 'home' %}<link rel="preload" as="image" href="{{ '/assets/images/aerial.webp' | relative_url }}">{% endif %}
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Xiangyu Lu","alternateName":"陆祥宇","url":"https://luxiangyugo.github.io/","jobTitle":"Postdoctoral Researcher","affiliation":{"@type":"Organization","name":"Zhejiang University"},"sameAs":["https://github.com/luxiangyugo","https://www.researchgate.net/profile/Xiangyu_Lu6","https://www.linkedin.com/in/xiangyu-lu-393207253/"]}</script>
 </head>

@@ -1,15 +1,11 @@
 <header class="site-header wrap">
-  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Xiangyu Lu home">
-    <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><circle cx="20" cy="20" r="13"/><circle cx="20" cy="20" r="6"/><path d="M20 0v10m0 20v10M0 20h10m20 0h10"/></svg>
-    <span>Xiangyu Lu <span class="brand-zh" lang="zh-CN">陆祥宇</span></span>
-  </a>
-  <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span aria-hidden="true">+</span></button>
-  <nav id="site-nav" aria-label="Main navigation">
+  <a class="brand" href="{{ '/' | relative_url }}">Home</a>
+  <nav aria-label="Main navigation">
     <a href="{{ '/research' | relative_url }}" {% if page.section == 'research' %}aria-current="page"{% endif %}>Research</a>
     <a href="{{ '/publications' | relative_url }}" {% if page.section == 'publications' %}aria-current="page"{% endif %}>Publications</a>
-    <a href="{{ '/cv' | relative_url }}" {% if page.section == 'about' %}aria-current="page"{% endif %}>About</a>
-    <a href="{{ '/hobby' | relative_url }}" {% if page.section == 'beyond' %}aria-current="page"{% endif %}>Beyond</a>
-    <a href="{{ '/contact' | relative_url }}" {% if page.section == 'contact' %}aria-current="page"{% endif %}>Contact <span aria-hidden="true">↗</span></a>
-    <a class="language-link" href="{{ '/cv#chinese-profile' | relative_url }}" lang="zh-CN" aria-label="阅读中文简介">中文</a>
+    <a href="{{ '/cv' | relative_url }}" {% if page.section == 'about' %}aria-current="page"{% endif %}>CV</a>
+    <a href="{{ '/hobby' | relative_url }}" {% if page.section == 'beyond' %}aria-current="page"{% endif %}>Hobbies</a>
+    <a href="{{ '/contact' | relative_url }}" {% if page.section == 'contact' %}aria-current="page"{% endif %}>Contact</a>
+    <a href="{{ '/cv#chinese-profile' | relative_url }}" lang="zh-CN">中文</a>
   </nav>
 </header>

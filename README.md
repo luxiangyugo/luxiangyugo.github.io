@@ -1,11 +1,9 @@
-# Xiangyu Lu — Across Scales
+# Xiangyu Lu
 
-Personal research website: https://luxiangyugo.github.io/
+Personal academic homepage: https://luxiangyugo.github.io/
 
-Reliable visual perception across scales, from agricultural remote sensing to optical inspection.
+Built with Jekyll. The site follows a simple academic homepage layout: a short introduction, portrait, news, and selected publications. Research, full publications, CV, hobbies, and contact details have separate pages.
 
-See [content and asset documentation](docs/content-and-assets.md) for editing, provenance, and local build instructions.
-
-Built with Jekyll. Published from the existing `luxy-pages` branch through GitHub Pages.
+See [content and asset documentation](docs/content-and-assets.md) for maintenance and local build instructions.
 
 Originally modified from [LeNPaul/academic](https://github.com/LeNPaul/academic); the original MIT license is preserved.

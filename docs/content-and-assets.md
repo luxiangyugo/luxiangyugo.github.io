@@ -1,18 +1,23 @@
 # Content and assets
 
-Updated 14 September 2026. The website is a Jekyll site and deploys through the existing GitHub Pages branch workflow.
+## Layout
 
-## Editing content
+The site follows the original academic homepage structure: white background, ordinary navigation, a short introduction with the original portrait, one news item, and selected publications. Research, the complete publication list, CV, hobbies, and contact information have separate pages. All pages are static and work without JavaScript.
 
+## Editing
+
+- `_layouts/home.html`: the short homepage introduction and news placement.
 - `_data/profile.yml`: public profile, Chinese introduction, links, and experience.
-- `_data/research.yml`: three research themes and five project narratives. Keep status labels accurate.
-- `_data/publications.yml`: published articles, full author lists, DOI links, and citations. Metadata checked against the Crossref records for each DOI on 14 September 2026. The homepage selects three first-author articles; Grade2Seg remains a research project.
-- `_data/funding.yml`: the awarded NSFC Category C project, number 32602720, scheduled for 2027–2029.
-- `_data/gallery.yml`: photographs and descriptive captions. Captions are editorial, not inferred dates or locations.
+- `_data/research.yml`: project descriptions and their current status.
+- `_data/publications.yml`: published articles, full author lists, DOI links, and citations. Metadata was checked against Crossref on 14 September 2026. Selected homepage entries shorten the author list; complete authors remain on the Publications page.
+- `_data/funding.yml`: NSFC Category C project 32602720, awarded and scheduled for 2027–2029.
+- `_data/gallery.yml`: photographs on the Hobbies page. No dates or locations are inferred from the images.
+
+Grade2Seg remains a research project. Optical work is described according to its current stage; ongoing research and implemented prototypes are distinguished from published papers. No experimental results are generated. The old downloadable CV is not presented as current.
 
 ## Images
 
-The images in `assets/images` are WebP derivatives of existing public repository assets. No generated research results are used.
+The homepage uses the original `assets/img/me2.jpg` portrait. WebP derivatives of existing public repository assets are used on Research and Hobbies pages:
 
 | Derivative | Original in assets/img |
 | --- | --- |
@@ -25,18 +30,10 @@ The images in `assets/images` are WebP derivatives of existing public repository
 | grade2seg.webp | fig6_weakly_supervised.png |
 | paddyseg.webp | r10_paddySeg.png |
 
-The original images and inherited licensing files remain in the repository. The focus explorer and ROI diagram are explicitly labeled conceptual illustrations. Focus positions are not calibrated depth. The CropSR figure is displayed intact; it is not split into an unverified pixel-aligned comparison slider.
-
-## Rendering and accessibility
-
-English is the main language. The About page includes a Chinese profile with its own language attribute and a direct navigation link. Core content is rendered by Jekyll and remains readable without JavaScript. JavaScript progressively adds the mobile menu, focus control, and publication filters. Citation disclosures use native HTML details. Reduced motion, keyboard focus, image dimensions, and legacy URLs are supported.
-
-The old downloadable CV is not presented as current. About is the maintained web CV; do not add a download until an up-to-date public document is available.
+Original assets and licensing files are preserved. The CropSR comparison figure is displayed intact.
 
 ## Development
 
-Run `bundle install` and `bundle exec jekyll serve`. The Gemfile pins the GitHub Pages-compatible Jekyll 3.10 series. Run `bundle exec jekyll build` before publishing. Do not commit `_site`, local dependency directories, or dated backup clones.
+Run `bundle install`, then `bundle exec jekyll serve`. Run `bundle exec jekyll build` before publishing. The Gemfile uses the GitHub Pages-compatible Jekyll 3.10 series. Keep `_site`, local dependencies, and backup clones out of the repository.
 
-Existing paths `/research`, `/publications`, `/cv`, `/hobby`, and `/contact` are preserved. The pre-redesign baseline commit is `c220b6cf7357e063525fdeb11d786d365565b9eb`.
-
-Design guidance was consulted from https://github.com/nextlevelbuilder/ui-ux-pro-max-skill. The final direction uses this site's own research and photographic material, warm paper, deep green, copper accents, serif headlines, and restrained interaction.
+Existing paths `/research`, `/publications`, `/cv`, `/hobby`, and `/contact` are preserved. The original remote baseline is `c220b6cf7357e063525fdeb11d786d365565b9eb`. The existing Pages workflow used the `luxy-pages` branch; verify a successful deployment after pushing.

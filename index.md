@@ -1,4 +1,4 @@
 ---
 layout: home
-description: "Xiangyu Lu · Postdoctoral Researcher at Zhejiang University. Reliable visual perception across scales, from aerial fields to optical detail."
+description: "Xiangyu Lu, postdoctoral researcher at Zhejiang University. Computer vision, agricultural remote sensing, and optical inspection."
 ---

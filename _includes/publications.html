@@ -1,5 +1,9 @@
 <ol class="publication-list">
 {% for paper in site.data.publications %}{% if include.selected != true or paper.selected %}
-<li class="publication" data-first="{{ paper.first_author }}"><span class="pub-year">{{ paper.year }}</span><div><h3 class="pub-title"><a href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noopener noreferrer">{{ paper.title | escape }}</a></h3><p class="pub-authors">{% for author in paper.authors %}{% if author == 'Xiangyu Lu' %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p><p class="pub-journal">{{ paper.journal }} · {{ paper.year }} · {{ paper.volume }}{% if paper.issue %}({{ paper.issue }}){% endif %}: {{ paper.page }}</p>{% unless include.selected %}<details class="pub-detail"><summary>Citation</summary><pre class="citation-text">{{ paper.citation | escape }}</pre></details>{% endunless %}</div><a class="pub-doi" href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noopener noreferrer" aria-label="Read {{ paper.title | escape }}"><span aria-hidden="true">↗</span></a></li>
+  <li class="publication">
+    <a class="pub-title" href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noopener noreferrer">{{ paper.title | escape }}</a>
+    <p class="pub-authors">{% if include.selected %}{% for author in paper.authors limit:3 %}{% if author == 'Xiangyu Lu' %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}, {% endfor %}et al.{% else %}{% for author in paper.authors %}{% if author == 'Xiangyu Lu' %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}.{% endif %}</p>
+    <p class="pub-journal"><cite>{{ paper.journal }}</cite>, {{ paper.year }}, {{ paper.volume }}{% if paper.issue %}({{ paper.issue }}){% endif %}: {{ paper.page }}. <a href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noopener noreferrer">DOI</a></p>
+  </li>
 {% endif %}{% endfor %}
 </ol>
