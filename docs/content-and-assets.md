@@ -18,7 +18,7 @@ The navigation and profile links use CSS backdrop blur with a near-opaque fallba
 
 - `_layouts/home.html`: the short homepage introduction and news placement.
 - `_data/profile.yml`: public profile, Chinese introduction, links, and experience.
-- `_data/research.yml`: project descriptions and their current status.
+- `_data/research.yml`: current/selected and earlier projects, their status, figure descriptions, source links, and image dimensions. Each project needs a figure.
 - `_data/publications.yml`: published articles, full author lists, DOI links, and citations. Metadata was checked against Crossref on 14 September 2026. Selected homepage entries shorten the author list; complete authors remain on the Publications page.
 - `_data/funding.yml`: NSFC Category C project 32602720, awarded and scheduled for 2027–2029.
 - `_data/gallery.yml`: photographs on the Hobbies page. No dates or locations are inferred from the images.
@@ -41,6 +41,10 @@ The homepage uses the original `assets/img/me2.jpg` portrait. WebP derivatives o
 | paddyseg.webp | r10_paddySeg.png |
 
 Original assets and licensing files are preserved. The CropSR comparison figure is displayed intact.
+
+Research now includes nine projects and ten figures. Two new conceptual illustrations cover multi-focus lens inspection and geometry-guided lens/sensor localization. Four earlier projects restore GeT grape-leaf diagnosis, algal-bloom mapping, citrus sizing, and LIBS spectroscopy; a second figure for PaddySeg explains direct geo-location. Every image links to its full-size version. Mobile layouts show the project title, image, and then the method description.
+
+See [research figure sources and generation prompts](research-figures.md) for provenance and the distinction between original research figures and generated conceptual illustrations. Sunny Optical is currently labeled as industry context; no formal collaboration, sponsorship, or product-performance claim is inferred.
 
 ## Development
 

@@ -143,14 +143,22 @@ p + p { margin-top: 14px; }
 .pub-journal a { margin-left: 4px; }
 .site-footer { display: flex; justify-content: space-between; gap: 20px; padding: 21px 0 27px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 .site-footer a { overflow-wrap: anywhere; }
-.research-interests { margin-bottom: 30px; }
-.research-interests ul { padding-left: 22px; margin: 0; }
-.project-detail { display: grid; grid-template-columns: minmax(0, 1fr) 310px; align-items: start; gap: 38px; padding: 28px 0; border-top: 1px solid var(--line); }
-.project-detail.text-only { grid-template-columns: 1fr; }
-.project-detail h2 { font-size: 20px; margin-bottom: 4px; }
-.project-status { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+.research-group { margin-top: 36px; }
+.research-group > h2 { margin-bottom: 20px; }
+.project-detail { display: grid; grid-template-columns: minmax(0, 1fr) 410px; grid-template-rows: auto 1fr; align-items: start; column-gap: 38px; padding: 32px 0; border-top: 1px solid var(--line); }
+.project-heading { grid-column: 1; grid-row: 1; margin-bottom: 16px; }
+.project-description { grid-column: 1; grid-row: 2; }
+.project-detail h3 { font-size: 20px; margin-bottom: 6px; }
+.project-status { color: var(--muted); font-size: 14px; }
+.project-context { margin-top: 12px; font-size: 14px; }
+.project-context span:lang(zh) { font-size: 17px; }
 .project-detail p:not(.project-status) { font-size: 15px; }
-.project-detail img { width: 100%; max-height: 380px; object-fit: contain; border-radius: 6px; }
+.project-figures { grid-column: 2; grid-row: 1 / span 2; display: grid; gap: 22px; }
+.research-image-link { display: block; border-radius: 10px; background: rgba(255, 255, 255, .58); overflow: hidden; }
+.research-image-link:focus-visible { outline-offset: 5px; }
+.project-detail img { width: 100%; max-height: 410px; object-fit: contain; border-radius: 10px; }
+.illustrated-project .research-image-link { box-shadow: 0 3px 14px rgba(37, 55, 48, .055); }
+.project-detail figcaption a { text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 9px; }
 .funding, .chinese-profile { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--line); }
 .funding p { font-size: 15px; }
@@ -172,6 +180,9 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .site-header, .profile-links { background: rgba(248, 250, 248, .94); }
 }
+@media (min-width: 761px) and (max-width: 1000px) {
+  .project-detail { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+}
 @media (max-width: 760px) {
   .wrap { width: calc(100% - 40px); }
   .site-header { display: block; padding: 10px 16px 8px; margin-top: 16px; }
@@ -184,7 +195,11 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
   h1 { font-size: 28px; }
   .profile h1 { font-size: 30px; }
   .profile h1 span { font-size: 26px; margin-left: 9px; }
-  .project-detail { grid-template-columns: minmax(0, 1fr) 235px; gap: 25px; }
+  .project-detail { display: flex; flex-direction: column; gap: 20px; }
+  .project-heading { order: 0; margin-bottom: 0; }
+  .project-description { order: 2; }
+  .project-figures { order: 1; }
+  .project-figures { width: 100%; max-width: 520px; }
   .experience-row { grid-template-columns: 145px minmax(0, 1fr); gap: 20px; }
   .home-news { grid-template-columns: 60px minmax(0, 1fr); gap: 16px; padding: 18px 20px; }
 }
@@ -211,7 +226,6 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
   .pub-title { font-size: 15px; }
   .pub-authors, .pub-journal { font-size: 13px; }
   .project-detail { grid-template-columns: 1fr; gap: 20px; }
-  .project-detail figure { max-width: 370px; }
   .experience-row { grid-template-columns: 1fr; gap: 5px; margin-bottom: 24px; }
   .gallery-grid { grid-template-columns: 1fr; gap: 25px; }
   .chinese-profile p { font-size: 18px; }

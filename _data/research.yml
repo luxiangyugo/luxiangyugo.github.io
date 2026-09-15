@@ -1,23 +1,52 @@
 projects:
 - id: optical-focus
-  name: Multi-focus defect perception
+  name: Multi-focus defect perception in optical components
   status: Ongoing research
   category: Optical inspection
-  method: Current work explores structure-aware background modeling and joint spatial–focus representations
-    under limited supervision. The aim is to separate normal optical structure from anomalous responses.
-  contribution: I develop mechanism-based prototypes that connect spatial structure with focus-dependent
-    appearance, supporting subsequent model design and evaluation.
+  method: I study how lens defects appear, fade, or become obscured as the imaging focus changes. The work
+    combines concentric and periodic structure modeling with spatial–focus representations to distinguish abnormal
+    responses from the normal lens background.
+  contribution: I develop mechanism-based prototypes for multi-focus lens inspection under limited supervision,
+    connecting optical structure with focus-dependent appearance and subsequent model evaluation.
+  image: multi-focus-optics.webp
+  alt: Conceptual illustration of a cutaway lens assembly and three inspection images of the same lens at different
+    focus indices, with a localized defect becoming sharper at one focus.
+  caption: Concept illustration · lens structure and defect appearance across focus indices.
+  illustration: true
+  context:
+    label: Industry context
+    name: Sunny Optical
+    name_zh: 舜宇光学
+    url: https://www.sunnyoptical.com/en/default.html
+  image_width: 1536
+  image_height: 1024
+- id: optical-roi
+  name: Geometry-guided optical localization
+  status: Implemented prototypes · ongoing evaluation
+  category: Practical vision systems
+  method: I localize lens centers, inner and outer rings, and sensor-chip regions by refining visual proposals
+    with geometric, edge, and concentric-structure checks. Related work studies few-shot anomaly detection
+    and transfer across components and imaging conditions.
+  contribution: I develop localization methods and C++ and Python API implementations for integration, visualization,
+    and evaluation.
+  image: optical-localization.webp
+  alt: 'Conceptual illustration of lens and image sensor localization: concentric ring fits on a lens, a rectangular
+    fit on the sensor active area, and the proposal-to-geometry-to-refined-ROI workflow.'
+  caption: Concept illustration · geometry refines lens and sensor localization proposals.
+  illustration: true
+  image_width: 1536
+  image_height: 1024
 - id: cropsr
   name: CropSR / EVADM
   status: Published · ISPRS JPRS 2024
   category: Image restoration
-  method: Effective variance attention-enhanced diffusion uses aerial-image variance patterns to guide
-    super-resolution. The work connects reconstruction quality with agricultural vision tasks.
-  contribution: First author. I developed the variance-aware super-resolution method and its cross-scale
-    evaluation, connecting image restoration to downstream perception.
+  method: Effective variance attention-enhanced diffusion uses aerial-image variance patterns to guide super-resolution.
+    The work connects reconstruction quality with agricultural vision tasks.
+  contribution: First author. I developed the variance-aware super-resolution method and its cross-scale evaluation,
+    connecting image restoration to downstream perception.
   image: cropsr.webp
-  alt: Original CropSR comparison figure showing a crop-field sample at high resolution, low resolution,
-    and after super-resolution.
+  alt: Original CropSR comparison figure showing a crop-field sample at high resolution, low resolution, and
+    after super-resolution.
   caption: Original research figure · HR / LR / SR, top to bottom.
   links:
   - name: Paper
@@ -26,34 +55,30 @@ projects:
     url: https://github.com/luxiangyugo/EVADM
   - name: Dataset
     url: https://data.mendeley.com/datasets/fhvph562cn
+  image_width: 1200
+  image_height: 1159
 - id: grade2seg
   name: Grade2Seg
   status: Research project
   category: Weakly supervised learning
   method: Ordinal learning, activation responses, and pseudo-masks connect inexpensive severity annotations
     to weed segmentation, with attention to generalization across field conditions.
-  contribution: I study grade-to-segmentation learning and develop the dataset and modeling workflow to
-    reduce dependence on dense pixel annotations.
+  contribution: I study grade-to-segmentation learning and develop the dataset and modeling workflow to reduce
+    dependence on dense pixel annotations.
   image: grade2seg.webp
-  alt: Grade2Seg research diagram connecting weed severity classification, activation maps, pseudo-masks,
-    and segmentation.
+  alt: Grade2Seg research diagram connecting weed severity classification, activation maps, pseudo-masks, and
+    segmentation.
   caption: Research workflow · from image-level supervision to spatial predictions.
-- id: optical-roi
-  name: Geometry-guided optical localization
-  status: Implemented prototypes · ongoing evaluation
-  category: Practical vision systems
-  method: Geometric, edge, and concentric-structure checks refine semantic proposals. Related work studies
-    few-shot anomaly detection, transfer to new components, and appearance variation across batches.
-  contribution: I develop localization methods and C++ and Python API implementations for integration,
-    visualization, and evaluation.
+  image_width: 1000
+  image_height: 605
 - id: paddyseg
   name: PaddySeg & direct geo-location
   status: Published · Drones 2023
   category: Agricultural remote sensing
   method: A lightweight segmentation workflow combines phenology recognition with camera-based geo-location
     and efficient feature sampling.
-  contribution: First author. I developed the segmentation and trait-mapping workflow to connect visual
-    predictions with field-scale observation.
+  contribution: First author. I developed the segmentation and trait-mapping workflow to connect visual predictions
+    with field-scale observation.
   image: paddyseg.webp
   alt: Research diagram illustrating aerial field segmentation and direct geographic mapping of rice phenology.
   caption: Original research figure · segmentation and spatial mapping.
@@ -62,3 +87,73 @@ projects:
     url: https://doi.org/10.3390/drones7020083
   - name: Code
     url: https://github.com/luxiangyugo/PaddySeg
+  secondary_image:
+    image: direct-geolocation.webp
+    alt: Original direct geo-location diagram connecting UAV position and camera projection to geographic coordinates
+      on the ground.
+    caption: Original research figure · camera-based direct geo-location.
+    width: 1903
+    height: 1251
+  image_width: 1100
+  image_height: 605
+earlier_projects:
+- id: get
+  name: GeT · grape leaf disease and pest diagnosis
+  status: Published · JKSU-CIS 2022
+  category: Plant health perception
+  method: Ghost-convolution features and a transformer encoder combine local symptom details with broader leaf
+    context for disease and pest classification. The work was evaluated using the GLDP12k grape-leaf image
+    dataset.
+  contribution: First author. I developed and evaluated the hybrid recognition model.
+  image: get-model.webp
+  alt: Original GeT model diagram showing the ghost-convolution backbone, transformer encoder, classification
+    head, and grape-leaf activation maps.
+  caption: Original research figure · model architecture and activation maps.
+  links:
+  - name: Paper
+    url: https://doi.org/10.1016/j.jksuci.2022.03.006
+  - name: Code
+    url: https://github.com/luxiangyugo/GeT_model
+  image_width: 2651
+  image_height: 2104
+- id: algal-mapping
+  name: UAV mapping of lake algal blooms
+  status: Research project · 2023
+  category: Environmental remote sensing
+  method: Cascaded waterbody and algal-bloom segmentation identifies affected areas in UAV imagery. Direct
+    geo-location connects image-level detections to a geographic map of the lake.
+  image: algal-mapping.webp
+  alt: Original aerial lake map with spatial algal-bloom detections overlaid along the shoreline and surrounding
+    water.
+  caption: Original project visualization · algal-bloom mapping.
+  links:
+  - name: Code
+    url: https://github.com/luxiangyugo/AlgalDet
+  image_width: 1175
+  image_height: 822
+- id: citrus-sizing
+  name: Vision-based citrus sizing
+  status: Engineering project · 2020
+  category: Visual measurement
+  method: HSV-based segmentation isolates citrus fruit against a controlled background. Image geometry and
+    pixel measurements are then used to estimate fruit diameter.
+  image: citrus-sizing.webp
+  alt: Original citrus sizing image showing individual fruit with measured outlines and diameter annotations.
+  caption: Original project image · fruit segmentation and diameter estimates.
+  image_width: 577
+  image_height: 388
+- id: libs
+  name: LIBS sensing of soil heavy metals
+  status: Undergraduate thesis · 2020
+  category: Optical spectroscopy
+  method: Laser-induced breakdown spectroscopy (LIBS) is used to detect heavy metals in soil. I studied signal
+    enhancement through an argon environment and a light-convergence chamber, and designed a batch-testing
+    platform.
+  image: libs-spectroscopy.webp
+  alt: Original LIBS figure showing principal-component loadings and spectral peaks against wavelength.
+  caption: Original thesis figure · spectral features and signal analysis.
+  links:
+  - name: Slides
+    url: /assets/img/r5_libs.pdf
+  image_width: 2121
+  image_height: 1905

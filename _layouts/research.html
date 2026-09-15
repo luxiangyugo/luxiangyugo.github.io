@@ -3,7 +3,13 @@ layout: default
 ---
 <div class="wrap page-body">
   <header class="page-heading"><h1>Research</h1><p>My research focuses on reliable visual perception under challenging imaging conditions, with applications in agricultural remote sensing and optical inspection.</p></header>
-  <section class="research-interests"><h2>Research interests</h2><ul><li>Image restoration and super-resolution</li><li>Weakly supervised segmentation and few-shot learning</li><li>Multi-focus defect perception and geometry-guided optical inspection</li></ul></section>
-  {% include research.html %}
+  <section class="research-group" aria-labelledby="current-research">
+    <h2 id="current-research">Current & selected research</h2>
+    {% include research.html %}
+  </section>
+  <section class="research-group" aria-labelledby="earlier-research">
+    <h2 id="earlier-research">Earlier research</h2>
+    {% include research.html projects=site.data.research.earlier_projects %}
+  </section>
   {% include funding.html %}
 </div>
