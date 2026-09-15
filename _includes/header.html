@@ -1,5 +1,5 @@
 <header class="site-header wrap">
-  <a class="brand" href="{{ '/' | relative_url }}">Home</a>
+  <a class="brand" href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
   <nav aria-label="Main navigation">
     <a href="{{ '/research' | relative_url }}" {% if page.section == 'research' %}aria-current="page"{% endif %}>Research</a>
     <a href="{{ '/publications' | relative_url }}" {% if page.section == 'publications' %}aria-current="page"{% endif %}>Publications</a>

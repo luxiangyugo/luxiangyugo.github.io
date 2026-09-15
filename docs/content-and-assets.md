@@ -2,7 +2,17 @@
 
 ## Layout
 
-The site follows the original academic homepage structure: white background, ordinary navigation, a short introduction with the original portrait, one news item, and selected publications. Research, the complete publication list, CV, hobbies, and contact information have separate pages. All pages are static and work without JavaScript.
+The site follows the original academic homepage structure: ordinary navigation, a short introduction with the original portrait, one news item, and selected publications. A pale gray-green background, translucent navigation and profile links, and quiet edge highlights add depth without changing the content hierarchy. Publication lists remain flat and readable. Research, the complete publication list, CV, hobbies, and contact information have separate pages. All pages are static and work without JavaScript.
+
+The refinement draws on [Taste-Skill's redesign guidance](https://github.com/hunger-Eric/taste-skill) and [Apple-UI's material principles](https://github.com/KODxixi/Apple-UI). Their large promotional layouts, animated backgrounds, and elaborate effects are not part of this academic site. The CSS is written for this repository; no external component code or runtime was imported.
+
+## Typography and materials
+
+English uses the system sans-serif stack. Chinese names, navigation, and the CV introduction use [LXGW WenKai](https://github.com/lxgw/LxgwWenKai), a handwriting-like typeface, with KaiTi fallbacks. The self-hosted WOFF2 contains the site's current characters and is approximately 44 KB; it does not depend on a font CDN. The upstream font is pinned to revision `50f4b182415a8c33d9a456df220b66a284e2509b`. Its SIL Open Font License, copyright, and explicit permission for webfont subsetting are preserved in `assets/fonts/OFL-LXGW-WenKai.txt`.
+
+After editing Chinese content, run `python scripts/subset-font.py` with `fonttools[woff]` installed, then rebuild Jekyll. The script downloads the pinned source temporarily and updates the webfont to cover characters in `_data`, `_includes`, and `_layouts`. The generated WOFF2 is committed; Pages does not need Python to build the site.
+
+The navigation and profile links use CSS backdrop blur with a near-opaque fallback when blur is unsupported. Focus indicators, reduced-motion preferences, forced colors, and print styling are supported. Glass is limited to small surfaces so long text remains clear.
 
 ## Editing
 
