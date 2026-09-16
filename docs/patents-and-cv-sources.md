@@ -23,10 +23,12 @@ Certificates and the Chinese CV are copied byte-for-byte. The signed source PDFs
 
 ## Chinese CV and homepage
 
-The web CV contains four major experience/education entries and three moderate Chinese biography paragraphs covering current role, education and research. The biography explicitly includes Toronto joint doctoral research from July 2024 to June 2025. Both the page introduction and Chinese anchor section offer Chinese and English PDF downloads, so neither requires scrolling back to the top. The June 2026 Chinese PDF is linked as supplied; its full project, honors, service and skills lists are not expanded into the webpage. The original English PDF remains explicitly dated 10 July 2025. Both source PDFs are unchanged.
+The web CV contains four major experience/education entries and two Chinese biography paragraphs: academic background, then research mechanisms and applications. The biography uses the concise Toronto date range 2024–2025; full months remain in the experience list. The postdoctoral start date is kept in its experience row rather than repeated as narrative. Both the page introduction and Chinese section offer Chinese and English PDF downloads. The June 2026 Chinese PDF is linked as supplied; its full project, honors, service and skills lists are not expanded into the webpage. The original English PDF remains explicitly dated 10 July 2025. Both source PDFs are unchanged.
 
 Home and CV use the requested abbreviation “ZJU-HIC, Zhejiang University” linked to the [official English HIC website](https://hic.zju.edu.cn/hicenglish/). The Research funding block appears immediately after the Research overview and before Current research. Current projects are numbered 15 and 14, continuing the unchanged historical 13-to-1 sequence.
 
 The Chinese biography omits the NSFC approval number. The dedicated funding record retains its bibliographic details. News now records the grant award in September 2026 and CN117911382B in August 2026. Contact has been removed from navigation; existing email links in Home, CV, and the footer remain, and `/contact` is a short compatibility page.
+
+The grant News description foregrounds optical imaging mechanisms and visual perception enhancement, retaining early-stage paddy-field weed identification as the application. This wording follows the awarded project's imaging-degradation and perception focus; it does not reclassify the grant as an industrial lens-inspection project.
 
 The Google Scholar URL is exactly `https://scholar.google.com/citations?user=u2q9sI8AAAAJ&hl=en`, with escaped HTML attributes and the decoded destination checked in the built homepage.

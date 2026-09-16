@@ -5,7 +5,7 @@ These project-bound PNGs are conceptual illustrations edited using the built-in 
 - Page asset: `assets/images/multi-focus-trajectories.png`; edit target: `assets/images/polar-fourier-optics.png`.
 - Page asset: `assets/images/florence2-model-grounding.png`; edit target: `assets/images/florence2-multimodal-optics.png`.
 
-Final generated sources: `exec-0326c656-4388-4ad4-8a12-c76e68a4df18.png` for the focus illustration and `exec-95bdb56d-eff7-436f-b3fa-4692aa1a0585.png` for the model illustration. Both were copied unmodified into the project. The model was refined once to separate image and text input groups; token strips represent the respective embeddings, not a claim about token counts.
+Final generated sources: `exec-0326c656-4388-4ad4-8a12-c76e68a4df18.png` for the focus illustration and `exec-f8858dcc-9d9e-4c43-b3ad-3bbfd7e74e89.png` for the model illustration. Both were copied unmodified into the project. The model was first refined to separate image and text input groups, then reformatted to a compact 1448 × 1086 (4:3) layout with common top/bottom column baselines and reduced outer whitespace. The ROI/AOI column no longer extends below its neighbors. Token strips represent embeddings, not a claim about token counts.
 
 The owner explicitly specified a 25-layer input. A stack notation may abbreviate visible planes; it does not imply that several distinct physical lenses are being stacked. The matched D/N regions and illustrative curves explain the proposed comparison of response strength and shape across focus. Normal responses may persist and vary across the same sequence. The drawn defect trajectory is one conceptual example, not a universal shape or a measured finding. No experimental performance or completed cross-focus model is claimed.
 

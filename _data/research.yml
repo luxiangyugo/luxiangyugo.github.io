@@ -37,8 +37,8 @@ projects:
     encoder and multimodal encoder–decoder. Grounded candidate regions lead to a separate ROI-refinement stage.
   caption: Concept illustration · semantic inputs, Florence-2 model, and grounded regions.
   illustration: true
-  image_width: 1536
-  image_height: 1024
+  image_width: 1448
+  image_height: 1086
   result: Geometry refines the candidates into inspection ROIs. Sensor localization uses an outer crop and a
     second inner-region prompt before mapping back to the original image; C++ and Python prototypes are under
     evaluation.
