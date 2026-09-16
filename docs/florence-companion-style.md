@@ -1,5 +1,7 @@
 # Florence-2 companion-style correction
 
+Historical wide-layout revision. The current asset rearranges the same content into two tiers; see [the latest layout record](florence-two-tier-layout.md).
+
 The user requested natural object proportions, an elbow connector from the sensor candidate to the final AOI, less outer whitespace through cropping, and the restrained visual style of the adjacent Multi-focus illustration.
 
 Final project asset: `assets/images/florence2-model-grounding.png` (2062 × 763), copied unmodified from `exec-eedfb55d-900d-42cd-a269-4b5927d917e4.png`. Built-in image_gen mode was used for the illustration edit; no CLI/API fallback. The reference `assets/images/multi-focus-trajectories.png` was used for style only and remains unchanged. A final user-requested refinement makes image/text token interaction visible inside the shared encoder–decoder and replaces the isolated output circle with an optical lens view bearing a fitted circle and center crosshair. The caption and accessible description were updated accordingly.

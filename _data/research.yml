@@ -37,8 +37,8 @@ projects:
     Grounded lens and sensor candidates lead to an overlaid lens ROI and a cropped sensor AOI in a separate refinement stage.
   caption: Concept illustration · image–text token interaction, grounding, and optical ROI refinement.
   illustration: true
-  image_width: 2062
-  image_height: 763
+  image_width: 1448
+  image_height: 1086
   result: Geometry refines the candidates into inspection ROIs. Sensor localization uses an outer crop and a
     second inner-region prompt before mapping back to the original image; C++ and Python prototypes are under
     evaluation.
