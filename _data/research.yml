@@ -33,12 +33,12 @@ projects:
     target descriptions into candidate image regions. This connects semantic prompts with spatial detections
     for lenses and sensors.
   image: florence2-model-grounding.png
-  alt: Concept illustration with image and text inputs entering a visible Florence-2 model, including an image
-    encoder and multimodal encoder–decoder. Grounded candidate regions lead to a separate ROI-refinement stage.
-  caption: Concept illustration · semantic inputs, Florence-2 model, and grounded regions.
+  alt: Concept illustration of image and text tokens interacting inside Florence-2's encoder–decoder.
+    Grounded lens and sensor candidates lead to an overlaid lens ROI and a cropped sensor AOI in a separate refinement stage.
+  caption: Concept illustration · image–text token interaction, grounding, and optical ROI refinement.
   illustration: true
-  image_width: 1448
-  image_height: 1086
+  image_width: 2062
+  image_height: 763
   result: Geometry refines the candidates into inspection ROIs. Sensor localization uses an outer crop and a
     second inner-region prompt before mapping back to the original image; C++ and Python prototypes are under
     evaluation.

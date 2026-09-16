@@ -1,5 +1,7 @@
 # Florence-2 alignment and whitespace revision
 
+Historical revision, superseded by [the companion-style correction](florence-companion-style.md). The 4:3 layout below was rejected because it elongated objects. The active asset now preserves natural proportions and removes outer margin with a literal crop.
+
 Built-in image_gen edits of `assets/images/florence2-model-grounding.png`; the final output replaces that same project asset at the owner's request. Research content, terminology, and neighboring figure are preserved. Dimensions are 1448 × 1086 (4:3).
 
 Final source: `exec-f8858dcc-9d9e-4c43-b3ad-3bbfd7e74e89.png`. Intermediate alignment source: `exec-d9de7831-f0fd-43be-9076-4a6749128561.png`.
@@ -17,4 +19,3 @@ Reduce horizontal gaps and rebalance column widths. Reflow labels neatly and mak
 ## Whitespace refinement prompt
 
 One final layout correction only. Preserve this aligned 4:3 Florence-2 diagram, every word, all objects, modules, colors and arrow meanings. The top and bottom empty bands are still much too large. On this 1448 × 1086 composition, reposition and reflow all four column groups so their common top edge is near y=35 and common bottom edge near y=1045, instead of the current y=150 and y=865. Maintain their aligned top/bottom edges. Rebalance the contents vertically within the taller panels: enlarge the optical thumbnails and model blocks where space permits, space the internal rows comfortably, and keep the text clear. ROI refinement remains above AOI in the last column, with AOI bottom aligned to the other columns. The complete diagram should fill about 93–95% of canvas height and width, with only a narrow even border around it. Do not merely crop the canvas into a wide horizontal banner; retain the more compact 4:3 proportion. Do not distort or stretch images, add labels or introduce new content. Remove the large empty outer bands; keep the approved scientific glass-like style.
-
