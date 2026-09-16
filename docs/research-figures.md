@@ -6,7 +6,7 @@ Grade2Seg and PaddySeg were re-encoded from their original full-resolution PNGs 
 
 ## Current concept illustrations
 
-The page shows `polar-fourier-optics.png` and `florence2-multimodal-optics.png`, generated conceptual illustrations in the requested lens-cutaway style. They explain lens-to-Polar–Fourier transformation and multimodal semantic grounding. Captions explicitly identify them as concept illustrations. Clicking them opens the same image at full size; the separate “Prototype outputs” buttons open real archived outputs. See [final image prompts and provenance](optical-concept-figures-20260916.md).
+The page shows `multi-focus-trajectories.png` and `florence2-model-grounding.png`, generated conceptual illustrations in the requested lens-cutaway style. The first emphasizes 25 focus layers and illustrative defect/normal trajectories, with Polar–Fourier reduced to the supporting spatial prior. The second shows image and text entering a visible Florence-2 architecture before grounded regions and subsequent ROI refinement. Captions identify concept imagery and illustrative trajectories. Clicking them opens the same image at full size; “Prototype outputs” opens real archived outputs. See [current prompts and provenance](trajectory-model-figures-20260916.md). The preceding lens-to-Polar and semantic-label illustrations are preserved with [their earlier prompts](optical-concept-figures-20260916.md).
 
 ## Archived source-based overviews and linked prototype plates
 

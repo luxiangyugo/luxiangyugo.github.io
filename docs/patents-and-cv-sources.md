@@ -23,7 +23,7 @@ Certificates and the Chinese CV are copied byte-for-byte. The signed source PDFs
 
 ## Chinese CV and homepage
 
-The web CV is intentionally brief: four major experience/education entries, two short Chinese biography paragraphs, email and direct PDF downloads. The June 2026 Chinese PDF is linked as supplied; its projects, honors, service and skills are not expanded into the webpage. The original English PDF is also downloadable and explicitly dated 10 July 2025. Toronto dates are July 2024–June 2025. The navigation's Chinese anchor still opens the compact biography with its Chinese PDF download.
+The web CV contains four major experience/education entries and three moderate Chinese biography paragraphs covering current role, education and research. The biography explicitly includes Toronto joint doctoral research from July 2024 to June 2025. Both the page introduction and Chinese anchor section offer Chinese and English PDF downloads, so neither requires scrolling back to the top. The June 2026 Chinese PDF is linked as supplied; its full project, honors, service and skills lists are not expanded into the webpage. The original English PDF remains explicitly dated 10 July 2025. Both source PDFs are unchanged.
 
 Home and CV use the requested abbreviation “ZJU-HIC, Zhejiang University” linked to the [official English HIC website](https://hic.zju.edu.cn/hicenglish/). The Research funding block appears immediately after the Research overview and before Current research. Current projects are numbered 15 and 14, continuing the unchanged historical 13-to-1 sequence.
 

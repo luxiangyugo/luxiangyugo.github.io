@@ -4,12 +4,13 @@ projects:
   name: Multi-focus defect perception in optical components
   status: Ongoing research
   category: Optical inspection
-  method: Polar–Fourier modeling separates regular lens structure from local residuals. The reconstructed background
-    preserves concentric patterns, while the residual emphasizes local deviations such as scratches and particles.
-  image: polar-fourier-optics.png
-  alt: Concept illustration connecting a cutaway optical lens and annular inspection image to a Polar strip,
-    then Fourier separation into regular background and a local residual.
-  caption: Concept illustration · from lens image to Polar–Fourier separation.
+  method: A 25-layer focus stack captures how the same lens region changes with focus. Cross-layer analysis
+    compares response strength and trajectory shape against normal optical-structure evolution, aiming to
+    distinguish defect-related deviations from persistent background patterns.
+  image: multi-focus-trajectories.png
+  alt: Concept illustration of a lens and 25-layer focus stack. Matched defect and normal-region markers connect
+    to illustrative response trajectories; both persist across focus but differ in strength and shape.
+  caption: Concept illustration · 25-layer input and illustrative focus-response trajectories.
   illustration: true
   context:
     label: Industry context
@@ -18,9 +19,8 @@ projects:
     url: https://www.sunnyoptical.com/en/default.html
   image_width: 1536
   image_height: 1024
-  result: Cross-focus analysis extends this structural prior to response strength and shape relative to normal
-    focus evolution. Joint perception across focus layers is under development; persistence alone does not define
-    a defect.
+  result: Polar–Fourier decomposition provides the spatial prior. Cross-focus feature modeling and joint
+    perception remain under development; the trajectories shown are illustrative, not measured results.
   links:
   - name: Prototype outputs
     url: /assets/images/polar-fourier-research.svg
@@ -29,18 +29,19 @@ projects:
   name: Multimodal optical localization with Florence-2
   status: Prototype · ongoing evaluation
   category: Vision-language perception
-  method: Florence-2 combines inspection images with language prompts to identify lens and sensor regions.
-    Semantic grounding links each target description to a candidate location; for sensors, an outer-region
-    crop supports a second prompt for the inner active area.
-  image: florence2-multimodal-optics.png
-  alt: Concept illustration of Florence-2 grounding image and text together. Colored descriptions identify a
-    lens region and a sensor window; a second sensor-screen prompt targets the inner area within a cropped AOI.
-  caption: Concept illustration · image–text grounding with Florence-2.
+  method: Image features and language tokens jointly enter Florence-2’s multimodal encoder–decoder, converting
+    target descriptions into candidate image regions. This connects semantic prompts with spatial detections
+    for lenses and sensors.
+  image: florence2-model-grounding.png
+  alt: Concept illustration with image and text inputs entering a visible Florence-2 model, including an image
+    encoder and multimodal encoder–decoder. Grounded candidate regions lead to a separate ROI-refinement stage.
+  caption: Concept illustration · semantic inputs, Florence-2 model, and grounded regions.
   illustration: true
   image_width: 1536
   image_height: 1024
-  result: Geometric checks refine these semantic proposals into inspection ROIs. C++ and Python prototypes
-    support this workflow; evaluation across components is ongoing.
+  result: Geometry refines the candidates into inspection ROIs. Sensor localization uses an outer crop and a
+    second inner-region prompt before mapping back to the original image; C++ and Python prototypes are under
+    evaluation.
   links:
   - name: Prototype outputs
     url: /assets/images/semantic-geometric-localization.svg

@@ -1,5 +1,7 @@
 # Optical concept figures · 16 September 2026
 
+These are preserved earlier revisions. The active page now uses the [25-layer trajectory and explicit Florence-2 model illustrations](trajectory-model-figures-20260916.md).
+
 Two project-bound raster illustrations were edited using the built-in image_gen tool. These are concept illustrations, clearly labeled on the page; generated pixels are not presented as experimental evidence. Actual archived outputs remain separately linked under “Prototype outputs”.
 
 | Asset | Edit target | Generated source |

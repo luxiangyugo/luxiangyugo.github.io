@@ -4,6 +4,8 @@ The spatial half now uses actual archived MFL104 prototype screenshots. Florence
 
 The requested cross-focus image strip and response curve cannot yet be completed from the material accessible in this task. The detailed plate, accessible through the “Prototype outputs” button, explicitly marks this missing evidence and does not draw a synthetic curve. The current page illustration is explicitly conceptual and does not stand in for these missing measurements.
 
+The newest page image includes an explicitly labeled illustrative D/N trajectory comparison over 25 focus layers, as requested by the owner. This conceptual graph does not close the measured-data gap below and must not be relabeled as an experimental result.
+
 The smallest useful addition is one matched MFL103 sample folder containing:
 
 1. `MFL103_05_track_overlay.png`, identifying the fixed spatial position and track number.
