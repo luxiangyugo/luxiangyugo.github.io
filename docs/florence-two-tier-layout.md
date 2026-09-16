@@ -2,9 +2,9 @@
 
 The user requested moving Grounded regions and ROI refinement below the input/model section because the previous illustration was too wide.
 
-Final project asset: `assets/images/florence2-model-grounding.png`, 1448 × 1086. Generated using the built-in image_gen tool and copied unmodified from `exec-197f6ffd-72f8-4529-8280-5b52c4fd39e1.png`. The intermediate layout source was `exec-9872c0df-c8cc-45a4-9a3e-649b62b4dd3d.png`. The edit target was the previous natural-proportion token-interaction illustration. No resampling, stretching or cropping was applied to the final output.
+Final project asset: `assets/images/florence2-model-grounding.png`, 1448 × 1086. Generated using the built-in image_gen tool and copied unmodified from `exec-3458beae-b1dc-4390-85f2-12a04e75e7ce.png`. This final color/connector edit used the two-tier source `exec-197f6ffd-72f8-4529-8280-5b52c4fd39e1.png`; the intermediate layout source was `exec-9872c0df-c8cc-45a4-9a3e-649b62b4dd3d.png`. No resampling, stretching or cropping was applied to the final output.
 
-The input images, semantic prompts and visible Florence-2 token interaction occupy the top tier. Grounded regions and downstream ROI refinement occupy the lower tier, with corresponding lens and sensor rows. The fitted lens circle, center crosshair, sensor AOI and elbow connector are preserved. A targeted correction removed a direct model-to-refinement bypass so the route proceeds through grounded candidates. The illustration remains conceptual, not an experimental inference output or an exact attention implementation.
+The input images, semantic prompts and visible Florence-2 token interaction occupy the top tier. Grounded regions and downstream ROI refinement occupy the lower tier, with corresponding lens and sensor rows. The fitted lens circle, center crosshair and sensor AOI are preserved. The latest user request replaces the sensor elbow connector with a straight horizontal arrow. Target colors consistently use teal for lenses and amber for sensors; model token rows use pale and darker blue glass, with neutral blue-gray modality arrows, so text modality is not conflated with sensor identity. A targeted correction removed a direct model-to-refinement bypass so the route proceeds through grounded candidates. The illustration remains conceptual, not an experimental inference output or an exact attention implementation.
 
 Validation: Jekyll build succeeded. Browser checks at 1440/768/375/320px found no horizontal overflow and confirmed that the displayed image ratio equals the natural 1448:1086 ratio. Desktop and mobile screenshots were inspected. All 15 research entries, the unchanged Multi-focus image and full-image link were preserved.
 
@@ -34,3 +34,20 @@ Remove the long AMBER connector that exits the right side of the Encoder–decod
 Keep a SINGLE shared model output: the existing lower teal connector from the Encoder–decoder to the lower-left "Grounded regions" group. Have its arrow terminate at the top of that group, representing both grounded candidates. The flow must be Florence-2 -> Grounded regions -> ROI refinement. Both lens and sensor results arise after multimodal fusion, not independently from an image-only or text-only branch.
 
 Do NOT remove or change the AMBER text-prompt input arrow into Text tokens. Do NOT change any Image tokens / Text tokens interaction arrows. Do NOT change the TEAL lens candidate -> refined lens arrow. Do NOT change the lower AMBER sensor candidate -> AOI elbow connector. Keep the bottom output groups exactly where they are. No new arrows, labels, panels or steps. Do not shift, stretch, crop or redesign any content. The only edit is removing the incorrect direct bypass and making the shared output end at the grounded group.
+
+## Final color and straight-connector prompt
+
+Make ONLY a color-consistency correction and a single connector-shape correction to this approved two-tier Florence-2 illustration. Preserve the exact layout, natural proportions, every object, every word, the glass style, the two token rows and their interaction arrows.
+
+COLOR LOGIC:
+Reserve TEAL and AMBER for the target categories throughout the entire figure:
+- Lens: "circular camera lens" under the input image AND in Text prompts, the grounded lens dashed box, the lens-to-ROI arrow, and the final fitted circle/center mark all use the same restrained TEAL.
+- Sensor: "sensor window" under the input image AND in Text prompts, the grounded sensor dashed box, the sensor-to-AOI arrow, and the inner AOI dashed rectangle all use the same restrained AMBER. Make the inner AOI outline amber rather than unrelated bright yellow.
+These target-category colors must not also imply that image modality means lens or text modality means sensor.
+
+Inside the Florence-2 MODEL, use a restrained neutral BLUE-GLASS scheme for modality tokens: pale icy blue glass for the Image tokens row, muted steel-blue glass for the Text tokens row, navy labels for both. Keep the two labeled rows and three fine double-headed arrows visible. Recolor the modality input arrows, small intermediate image tiles, interaction arrows, and the shared model-output connector in muted blue-gray, not target-category orange. Both semantic prompts jointly enter the text-token row. In particular, the long Text prompts -> Text tokens arrow must NOT remain orange, and Text tokens must NOT remain orange. No new legend or labels; the existing row labels distinguish the two modalities. Keep these neutral blue shades soft and transparent, without adding saturated purple or extra accent colors.
+
+BOTTOM ARROW:
+Replace ONLY the bottom amber bent/elbow connector from the sensor candidate to its AOI with a single straight horizontal amber arrow. Keep its two endpoints on the corresponding sensor regions at a common vertical level. No bend, detour or diagonal. Do not move or distort the sensor images. Keep the upper straight lens arrow unchanged.
+
+Do not redesign, rearrange, add or remove modules. Keep all other arrows and text in place. Preserve 4:3 composition, small outer margins, realistic lens and sensor proportions, compact two-tier layout and refined sage background. This is a precise edit, not a new interpretation of the illustration.
