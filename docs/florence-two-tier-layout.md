@@ -1,5 +1,7 @@
 # Florence-2 two-tier layout
 
+The latest asset retains this layout and color logic with refined smartphone camera-module renders. See [the 2026-09-17 object-edit and research-copy record](research-significance-and-phone-module-20260917.md) for the current source image and prompts; source IDs below document the earlier layout/color revision.
+
 The user requested moving Grounded regions and ROI refinement below the input/model section because the previous illustration was too wide.
 
 Final project asset: `assets/images/florence2-model-grounding.png`, 1448 × 1086. Generated using the built-in image_gen tool and copied unmodified from `exec-3458beae-b1dc-4390-85f2-12a04e75e7ce.png`. This final color/connector edit used the two-tier source `exec-197f6ffd-72f8-4529-8280-5b52c4fd39e1.png`; the intermediate layout source was `exec-9872c0df-c8cc-45a4-9a3e-649b62b4dd3d.png`. No resampling, stretching or cropping was applied to the final output.

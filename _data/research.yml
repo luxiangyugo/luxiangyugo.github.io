@@ -19,8 +19,9 @@ projects:
     url: https://www.sunnyoptical.com/en/default.html
   image_width: 1536
   image_height: 1024
-  result: Polar–Fourier decomposition provides the spatial prior. Cross-focus feature modeling and joint
-    perception remain under development; the trajectories shown are illustrative, not measured results.
+  result: Polar–Fourier modeling establishes an interpretable reference for normal optical structure. The ongoing
+    extension across focus aims to resolve ambiguities in single-layer inspection, distinguishing defect-related
+    deviations from persistent background patterns and supporting reliable anomaly localization under limited annotation.
   links:
   - name: Prototype outputs
     url: /assets/images/polar-fourier-research.svg
@@ -34,14 +35,15 @@ projects:
     for lenses and sensors.
   image: florence2-model-grounding.png
   alt: Concept illustration of image and text tokens interacting inside Florence-2's encoder–decoder.
-    Grounded lens and sensor candidates lead to an overlaid lens ROI and a cropped sensor AOI in a separate refinement stage.
+    Smartphone camera-module lens and sensor candidates lead to an overlaid circular lens ROI and a cropped sensor AOI.
   caption: Concept illustration · image–text token interaction, grounding, and optical ROI refinement.
   illustration: true
   image_width: 1448
   image_height: 1086
-  result: Geometry refines the candidates into inspection ROIs. Sensor localization uses an outer crop and a
-    second inner-region prompt before mapping back to the original image; C++ and Python prototypes are under
-    evaluation.
+  result: Geometric constraints refine semantic candidates into valid inspection regions; sensor localization uses
+    an outer crop and a second inner-region prompt before mapping back to the original image. This links target
+    recognition to physical component boundaries, aiming to reduce background interference and the reliance on
+    component-specific localization rules.
   links:
   - name: Prototype outputs
     url: /assets/images/semantic-geometric-localization.svg
